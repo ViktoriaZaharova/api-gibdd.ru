@@ -1,5 +1,5 @@
 $('.btn-burger').on('click', function () {
-   $('.menu').fadeToggle();
+    $('.menu').fadeToggle();
 });
 
 $('.btn-close').on('click', function () {
@@ -15,3 +15,7 @@ $('.menu li a').each(function () {
     }
 });
 // end
+
+
+
+$('[data-toggle="tooltip"]').tooltip();

@@ -22,6 +22,9 @@
         rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -31,411 +34,477 @@
 
 <div class="wrapper">
   <div class="header-cabinet">
-    <a href="index.html" class="logo-cabinet">API-GIBDD</a>
-    <div class="navbar-custom-menu">
-      <a href="#" class="btn btn-blue">Пополнить</a>
-      <ul class="nav navbar-nav">
-        <li class="dropdown messages-menu">
-          <label>
-            На счету: 0₽ (<span class="tooltip-bottom"
-                                data-tooltip="это сумма, которая заблокирована на счете по заявкам, которые на данный момент уже находятся в работе">заблокировано - 0₽</span>)
-          </label>
-        </li>
+    <a href="index.html" class="logo">
+      <span class="logo-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#logo"></use></svg></span>
+      <span class="logo-text">API-GIBDD.RU</span>
+    </a>
 
-        <li class="dropdown messages-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            Стоимость заявки: 150₽
-          </a>
-        </li>
+    <nav class="navbar navbar-static-top">
 
-        <li class="dropdown user user-menu">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="hidden-xs">markof2019@yandex.ru</span>
-          </a>
-          <ul class="dropdown-menu">
-            <li class="user-footer">
-              <div class="pull-left">
-                <button type="button" class="btn btn-link btn-flat" data-toggle="modal" data-target="#modal-pass">
-                  Сменить пароль
-                </button>
+      <div class="navbar-custom-menu">
+        <a href="#" class="btn btn-blue">Пополнить</a>
+        <ul class="nav navbar-nav">
+          <li class="dropdown messages-menu">
+            <label>
+              На счету: 0₽ (<span class="tooltip-item" data-toggle="tooltip" data-placement="bottom"
+                                  title="это сумма, которая заблокирована на счете по заявкам, которые на данный момент уже находятся в работе">заблокировано - 0₽</span>)
+            </label>
+          </li>
+
+          <li class="dropdown messages-menu">
+            <a href="#">
+              Стоимость заявки: 150₽
+            </a>
+          </li>
+
+          <li class="dropdown user user-menu">
+            <a href="#">
+              <span class="hidden-xs">markof2019@yandex.ru</span>
+            </a>
+            <!--            <ul class="dropdown-menu">-->
+            <!--              <li class="user-footer">-->
+            <!--                <div class="pull-left">-->
+            <!--                  <button type="button" class="btn btn-link btn-flat" data-toggle="modal" data-target="#modal-pass">-->
+            <!--                    Сменить пароль-->
+            <!--                  </button>-->
+            <!--                </div>-->
+            <!--                <div class="pull-right">-->
+            <!--                  <a href="index.html" class="btn btn-blue">Выйти</a>-->
+            <!--                </div>-->
+            <!--              </li>-->
+            <!--            </ul>-->
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="main-wrapper">
+    <div class="main-sidebar">
+      <div class="main-sidebar-item">
+        <h3>Кабинет агента</h3>
+        <ul class="menu-sidebar">
+          <li>
+            <a href="#" class="menu-sidebar-links active"><i class="fa fa-dashboard"></i>
+              <span class="menu-sidebar-links__text">Dashboard</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-sidebar-item">
+        <h3>Финансы</h3>
+        <ul class="menu-sidebar">
+          <li>
+            <a href="#" class="menu-sidebar-links"><i class="fa fa-credit-card"></i>
+              <span class="menu-sidebar-links__text">Пополнение баланса</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-sidebar-item">
+        <h3>Настройки</h3>
+        <ul class="menu-sidebar">
+          <li>
+            <a href="#" class="menu-sidebar-links"><i class="fa fa-code"></i>
+              <span class="menu-sidebar-links__text">Доступ к API</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="dashboard-box">
+              <div class="date">11.06.21</div>
+              <ul class="list-dashboard">
+                <li><p>Запросов сегодня: 3 765 шт</p></li>
+                <li>
+                  <p>Скорость ответа: 2.3 сек</p>
+                </li>
+                <li>
+                  <p>Осталось запросов: 3 765 шт</p>
+                </li>
+                <li>
+                  <p>Запросов вчера: 1 765 шт</p>
+                </li>
+                <li><a href="#" class="btn btn-blue">Пополнить баланс</a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <h1>Новости</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-7">
+            <ul class="timeline">
+
+              <!-- timeline time label -->
+              <li class="time-label">
+                <span class="bg-blue">
+                    2021-06-13
+                </span>
+              </li>
+              <li>
+                <i class="fa fa-info bg-gray"></i>
+                <div class="timeline-item bg-gray-light">
+
+                  <div class="timeline-header"><a href="#">Облегчаем вам поиск клиентов</a>
+                    <span class="time"><i class="fa fa-clock-o"></i> 2021-06-13</span>
+                  </div>
+
+                  <div class="timeline-body">
+                    <p>На наш сайт добавлена новая услуга - "Данные полиса ОСАГО". С ее помощью вы можете упростить себе
+                      поиск новых клиентов.</p>
+                    <p>Как это сделать? Все просто!</p>
+                    <p>Выгляните в окно. Вокруг вас на стоянках и парковках много машин, и всем им нужен полис ОСАГО.
+                      Главное напомнить о себе в нужный момент, когда полис ОСАГО у них заканчивается. Именно для этого
+                      и нужна наша услуга. Мы подскажем если на машину в ближайшее время заканчивается полис, а как же
+                      сообщим большинство данных полиса. Пользоваться данной услугой можно легко с телефона без входа в
+                      Личный Кабинет.</p>
+                    <p>Для этого, перейдите в разделе&nbsp;"Данные полиса ОСАГО" и сгенерируйте для себя персональную
+                      ссылку. Ее можно переслать себе на телефон или просто отсканировать камерой qr-код. Все! Теперь
+                      можно смело выходить на охоту за новыми клиентами!
+                    </p></div>
+
+                  <div class="timeline-footer">
+                    <a href="#" class="links-blue">Узнать подробнее...</a>
+                  </div>
+                </div>
+              </li>
+              <!-- END timeline item -->
+
+            </ul>
+            <ul class="timeline">
+
+              <!-- timeline time label -->
+              <li class="time-label">
+                <span class="bg-blue">
+                    2021-06-13
+                </span>
+              </li>
+              <li>
+                <i class="fa fa-info bg-gray"></i>
+                <div class="timeline-item bg-gray-light">
+
+                  <div class="timeline-header"><a href="#">Облегчаем вам поиск клиентов</a>
+                    <span class="time"><i class="fa fa-clock-o"></i> 2021-06-13</span>
+                  </div>
+
+                  <div class="timeline-body">
+                    <p>На наш сайт добавлена новая услуга - "Данные полиса ОСАГО". С ее помощью вы можете упростить себе
+                      поиск новых клиентов.</p>
+                    <p>Как это сделать? Все просто!</p>
+                    <p>Выгляните в окно. Вокруг вас на стоянках и парковках много машин, и всем им нужен полис ОСАГО.
+                      Главное напомнить о себе в нужный момент, когда полис ОСАГО у них заканчивается. Именно для этого
+                      и нужна наша услуга. Мы подскажем если на машину в ближайшее время заканчивается полис, а как же
+                      сообщим большинство данных полиса. Пользоваться данной услугой можно легко с телефона без входа в
+                      Личный Кабинет.</p>
+                    <p>Для этого, перейдите в разделе&nbsp;"Данные полиса ОСАГО" и сгенерируйте для себя персональную
+                      ссылку. Ее можно переслать себе на телефон или просто отсканировать камерой qr-код. Все! Теперь
+                      можно смело выходить на охоту за новыми клиентами!
+                    </p></div>
+
+                  <div class="timeline-footer">
+                    <a href="#" class="links-blue">Узнать подробнее...</a>
+                  </div>
+                </div>
+              </li>
+              <!-- END timeline item -->
+
+            </ul>
+            <ul class="timeline">
+
+              <!-- timeline time label -->
+              <li class="time-label">
+                <span class="bg-blue">
+                    2021-06-13
+                </span>
+              </li>
+              <li>
+                <i class="fa fa-info bg-gray"></i>
+                <div class="timeline-item bg-gray-light">
+
+                  <div class="timeline-header"><a href="#">Облегчаем вам поиск клиентов</a>
+                    <span class="time"><i class="fa fa-clock-o"></i> 2021-06-13</span>
+                  </div>
+
+                  <div class="timeline-body">
+                    <p>На наш сайт добавлена новая услуга - "Данные полиса ОСАГО". С ее помощью вы можете упростить себе
+                      поиск новых клиентов.</p>
+                    <p>Как это сделать? Все просто!</p>
+                    <p>Выгляните в окно. Вокруг вас на стоянках и парковках много машин, и всем им нужен полис ОСАГО.
+                      Главное напомнить о себе в нужный момент, когда полис ОСАГО у них заканчивается. Именно для этого
+                      и нужна наша услуга. Мы подскажем если на машину в ближайшее время заканчивается полис, а как же
+                      сообщим большинство данных полиса. Пользоваться данной услугой можно легко с телефона без входа в
+                      Личный Кабинет.</p>
+                    <p>Для этого, перейдите в разделе&nbsp;"Данные полиса ОСАГО" и сгенерируйте для себя персональную
+                      ссылку. Ее можно переслать себе на телефон или просто отсканировать камерой qr-код. Все! Теперь
+                      можно смело выходить на охоту за новыми клиентами!
+                    </p></div>
+
+                  <div class="timeline-footer">
+                    <a href="#" class="links-blue">Узнать подробнее...</a>
+                  </div>
+                </div>
+              </li>
+              <!-- END timeline item -->
+
+            </ul>
+            <ul class="timeline">
+
+              <!-- timeline time label -->
+              <li class="time-label">
+                <span class="bg-blue">
+                    2021-06-13
+                </span>
+              </li>
+              <li>
+                <i class="fa fa-info bg-gray"></i>
+                <div class="timeline-item bg-gray-light">
+
+                  <div class="timeline-header"><a href="#">Облегчаем вам поиск клиентов</a>
+                    <span class="time"><i class="fa fa-clock-o"></i> 2021-06-13</span>
+                  </div>
+
+                  <div class="timeline-body">
+                    <p>На наш сайт добавлена новая услуга - "Данные полиса ОСАГО". С ее помощью вы можете упростить себе
+                      поиск новых клиентов.</p>
+                    <p>Как это сделать? Все просто!</p>
+                    <p>Выгляните в окно. Вокруг вас на стоянках и парковках много машин, и всем им нужен полис ОСАГО.
+                      Главное напомнить о себе в нужный момент, когда полис ОСАГО у них заканчивается. Именно для этого
+                      и нужна наша услуга. Мы подскажем если на машину в ближайшее время заканчивается полис, а как же
+                      сообщим большинство данных полиса. Пользоваться данной услугой можно легко с телефона без входа в
+                      Личный Кабинет.</p>
+                    <p>Для этого, перейдите в разделе&nbsp;"Данные полиса ОСАГО" и сгенерируйте для себя персональную
+                      ссылку. Ее можно переслать себе на телефон или просто отсканировать камерой qr-код. Все! Теперь
+                      можно смело выходить на охоту за новыми клиентами!
+                    </p></div>
+
+                  <div class="timeline-footer">
+                    <a href="#" class="links-blue">Узнать подробнее...</a>
+                  </div>
+                </div>
+              </li>
+              <!-- END timeline item -->
+
+            </ul>
+            <ul class="timeline">
+
+              <!-- timeline time label -->
+              <li class="time-label">
+                <span class="bg-blue">
+                    2021-06-13
+                </span>
+              </li>
+              <li>
+                <i class="fa fa-info bg-gray"></i>
+                <div class="timeline-item bg-gray-light">
+
+                  <div class="timeline-header"><a href="#">Облегчаем вам поиск клиентов</a>
+                    <span class="time"><i class="fa fa-clock-o"></i> 2021-06-13</span>
+                  </div>
+
+                  <div class="timeline-body">
+                    <p>На наш сайт добавлена новая услуга - "Данные полиса ОСАГО". С ее помощью вы можете упростить себе
+                      поиск новых клиентов.</p>
+                    <p>Как это сделать? Все просто!</p>
+                    <p>Выгляните в окно. Вокруг вас на стоянках и парковках много машин, и всем им нужен полис ОСАГО.
+                      Главное напомнить о себе в нужный момент, когда полис ОСАГО у них заканчивается. Именно для этого
+                      и нужна наша услуга. Мы подскажем если на машину в ближайшее время заканчивается полис, а как же
+                      сообщим большинство данных полиса. Пользоваться данной услугой можно легко с телефона без входа в
+                      Личный Кабинет.</p>
+                    <p>Для этого, перейдите в разделе&nbsp;"Данные полиса ОСАГО" и сгенерируйте для себя персональную
+                      ссылку. Ее можно переслать себе на телефон или просто отсканировать камерой qr-код. Все! Теперь
+                      можно смело выходить на охоту за новыми клиентами!
+                    </p></div>
+
+                  <div class="timeline-footer">
+                    <a href="#" class="links-blue">Узнать подробнее...</a>
+                  </div>
+                </div>
+              </li>
+              <!-- END timeline item -->
+
+            </ul>
+
+            <ul class="pagination">
+              <li><a href="#">Следующая</a></li>
+              <li><a href="#">Предыдущая</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-5">
+            <div class="question-box">
+              <h3>Частые вопросы</h3>
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <a href="#" class="btn btn-link btn-block text-left collapsed" data-toggle="collapse"
+                       data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Как проверить полную историю водителя?
+                    </a>
+                  </div>
+
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                       data-parent="#accordionExample">
+                    <div class="card-body">
+                      <p>Для это вам нужно перейти в раздел "Заявка на восстановление".</p>
+
+                      <p>Сверху будет большой зеленый переключатель. Перейдите на "Запрос истории".</p>
+
+                      <p>После проверки истории вы можете тут же вернуть переключатель на "Подать заявку" и отправить
+                        заявку без повторного заполнения данных водителя.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <a href="#" class="btn btn-link btn-block text-left collapsed" data-toggle="collapse"
+                       data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+
+                      Почему я не могу подать заявку?
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <p>Если вы получаете ошибку, "попробуйте позже", значит на текущий момент есть проблема в РСА с
+                        получением текущего кбм водителя. Достаточно повторить отправку заявки через 10-15 минут</p>
+
+                      <p>Если же у вас ошибка "недостаточно баланса", то это означает что у вас нет свободных денег для
+                        отправки заявки. В нашей платформе деньги холдируются по каждой заявке отдельно. То есть, если
+                        вы
+                        хотите подать 5 заявок, то у вас на балансе должны быть деньги на все эти 5 заявок.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <a href="#" class="btn btn-link btn-block text-left collapsed" data-toggle="collapse"
+                       data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+
+                      Как зарегистрировать агента?
+
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                       data-parent="#accordionExample">
+                    <div class="card-body">
+                      <p>Вы можете зарегистрировать под собой новых агентов.</p>
+
+                      <p>Это можно сделать двумя способами:</p>
+
+                      <ul class="list-dots">
+                        <li>самостоятельно, вручную зарегистрировать агента</li>
+                        <li>передать агенту свою реферальную ссылку, по которой он зарегистрируется</li>
+                      </ul>
+
+                      <p>Первоначально вам один раз нужно настроить партнерскую программу перейдя в "Настройки" раздела
+                        "Партнерская программа" и установив цену по умолчанию для агентов и сохранив свой реферальный
+                        код
+                        предварительно сгенерировав его или указав вручную.</p>
+                      <p>После настройки вы можете регистрировать агентов любым из перечисленных выше способов
+                        (самостоятельно или отправив агенту свою персональную ссылку).</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingFour">
+                    <a href="#" class="btn btn-link btn-block text-left collapsed" data-toggle="collapse"
+                       data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+
+                      Ошибся при подаче заявки. Что делать?
+                    </a>
+                  </div>
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <p>Специально для случаев когда агент опечатался в данных при подаче или клиент отказался, мы
+                        отправляем заявки в РСА только вечером. То есть у агента есть целый день, что бы внести
+                        исправления или удалить уже поданную заявку.</p>
+
+                      <p>Для этого необходимо перейти в "Список заявок" и нажать кнопку редактирования в строке с нужной
+                        заявок (самая правая колонка со значком). В открывшемся окне вы можете внести изменение или
+                        нажать
+                        кнопку Удалить.</p>
+
+                      <p>Учтите, что это можно сделать только пока заявка находится в статусе "Новая". Как только заявка
+                        переходит в статус "В работе" (передается в РСА) внесение изменений или удаление становиться
+                        невозможным.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingFive">
+                    <a href="#" class="btn btn-link btn-block text-left collapsed" data-toggle="collapse"
+                       data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+
+                      Какой срок рассмотрения заявки?
+                    </a>
+                  </div>
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <p>Стандартный срок - ДО 5 рабочих дней.</p>
+
+                      <p>Вы всегда можете увидеть в "Списке заявок" точную дату до которой будет получен ответ (смотрите
+                        предпоследний столбец). То есть, если там указано 01-01-2020, то это означает, что гарантировано
+                        до конца дня 1 января вы получите ответ по вашей заявке.</p>
+
+                      <p>Обращаем внимание, что указана максимальная дата. По статистике наибольшая часть заявок
+                        получает
+                        положительный ответ уже на 1-2 день.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingSex">
+                    <a href="#" class="btn btn-link btn-block text-left collapsed" data-toggle="collapse"
+                       data-target="#collapseSex" aria-expanded="false" aria-controls="collapseSex">
+
+                      Как подать заявку на Перенос КБМ?
+                    </a>
+                  </div>
+                  <div id="collapseSex" class="collapse" aria-labelledby="headingSex" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <p>Стандартный срок - ДО 5 рабочих дней.</p>
+
+                      <p>Вы всегда можете увидеть в "Списке заявок" точную дату до которой будет получен ответ (смотрите
+                        предпоследний столбец). То есть, если там указано 01-01-2020, то это означает, что гарантировано
+                        до конца дня 1 января вы получите ответ по вашей заявке.</p>
+
+                      <p>Обращаем внимание, что указана максимальная дата. По статистике наибольшая часть заявок
+                        получает
+                        положительный ответ уже на 1-2 день.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="pull-right">
-                <a href="logout.php" class="btn btn-default btn-flat">Выйти</a>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright">Copyright © 2018-2019. All rights reserved.</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
 
 </div>
 
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-lg-3">
-        <a href="index.html" class="logo">
-          <span class="logo-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#logo"></use></svg></span>
-          <span class="logo-text">API-GIBDD.RU</span>
-        </a>
-      </div>
-
-      <div class="col-6 col-lg-9 d-flex flex-wrap align-items-center">
-        <ul class="menu">
-          <li class="btn-close"></li>
-          <li class="menu-item"><a href="index.html" class="menu-links active">API ГИБДД проверка авто</a></li>
-          <li class="menu-item"><a href="page.html" class="menu-links">API штрафы ГИБДД</a></li>
-          <li class="menu-item"><a href="price.html" class="menu-links">Стоимость</a></li>
-          <li class="menu-item"><a href="contacts.html" class="menu-links">Контакты</a></li>
-        </ul>
-
-        <a href="#" class="btn btn-blue" data-toggle="modal" data-target="#modalEntrance">Войти</a>
-        <div class="btn-burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main class="home">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-lg-7">
-        <div class="main-content">
-          <h1>API ГИБДД.РФ
-            проверка автомобиля
-          </h1>
-          <div class="box-text">
-            <p>Получайте информацию о штрафах ГИБДД с фотографиями и постановлениями без задержек и разгадывания капчи,
-              пройдите регистрацию и получити личный API ключ для получения штрафов ГИБДД
-            </p>
-          </div>
-
-          <div class="btn-group">
-            <a href="#" class="btn btn-blue">Попробовать бесплатно</a>
-            <a href="#" class="btn btn-border" data-toggle="modal" data-target="#modalPrice">Уточнить стоимость</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-5">
-        <div class="main-img"><img src="img/img1.svg" alt=""></div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="main-item">
-          <div class="main-item__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#clock"></use>
-            </svg>
-          </div>
-          <div class="main-item__content">
-            <h3>3.1 секунды</h3>
-            <p>Средняя скорость
-              ответа</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="main-item">
-          <div class="main-item__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#icon1"></use>
-            </svg>
-          </div>
-          <div class="main-item__content">
-            <h3>4300 штук</h3>
-            <p>Количество запросов
-              в минуту</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="main-item">
-          <div class="main-item__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#icon2"></use>
-            </svg>
-          </div>
-          <div class="main-item__content">
-            <h3>45%</h3>
-            <p>Нагрузка на базу
-              данных ГБДД</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="main-item">
-          <div class="main-item__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#icon3"></use>
-            </svg>
-          </div>
-          <div class="main-item__content">
-            <h3>0,4 копейки</h3>
-            <p>Средняя стоимость
-              запроса</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
-<section class="testing-work bg-light-grey">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-8">
-        <h2>Протестируй работу API</h2>
-        <div class="box-text">
-          <p>Укажите VIN номер для тестовой проверки скорости ответа API</p>
-        </div>
-        <form method="post" class="form-test">
-          <label><input type="text" placeholder="iWiNHJDUJ68GJJHd66" name="val-form"></label>
-          <button class="btn btn-blue" type="submit">Проверить</button>
-        </form>
-
-        <div class="testing-last">
-          <h3>Последние проверки</h3>
-
-          <ul class="list-testing-last">
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-            <li><a href="#">iWiNHJDUJ6866</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-4">
-        <div class="testing-work-box">
-          <svg class="svg-icon testing-work-box__decor">
-            <use xlink:href="img/sprite.svg#settings"></use>
-          </svg>
-          <div class="testing-work-box__top">
-            <div class="testing-work-box__icon">
-              <svg class="svg-icon">
-                <use xlink:href="img/sprite.svg#clock"></use>
-              </svg>
-            </div>
-            <div class="testing-work-box__text">
-              <h3>Последняя проверка: 10.06.2021</h3>
-              <p>Время ответа: <strong class="color-green">2,1 секунды</strong></p>
-            </div>
-          </div>
-
-          <div class="testing-work-box__body">
-            <ul class="list-characteristics">
-              <li>Марка и(или) модель: РЕ*****</li>
-              <li>Год выпуска: 20**</li>
-              <li>Идентификационный номер (VIN): X7LLSRB2HCH555744</li>
-              <li>Номер шасси (рамы): -</li>
-              <li>Номер кузова (кабины): X7LLSRB2HCH555744</li>
-              <li>Цвет кузова (кабины): **ЖЕВЫЙ</li>
-              <li>Рабочий объем (см³): 13***</li>
-              <li>Мощность (кВт/л.с.): 55.200/75.0</li>
-              <li>Тип транспортного средства: Легковые автомобили седан</li>
-              <li>Периоды владения транспортным средством...</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="stages-entrance p-60">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2>Как получить доступ к API GIBDD</h2>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="stages-entrance-box">
-          <div class="stages-entrance-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#account"></use>
-            </svg>
-          </div>
-          <h3>Пройдите простую регистрацию</h3>
-          <p>Регистрация занимает не более 2 минут, уже после регистрации вы полючите ключ</p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="stages-entrance-box">
-          <div class="stages-entrance-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#account2"></use>
-            </svg>
-          </div>
-          <h3>Запросите тестовый ключ</h3>
-          <p>Вы можете получить тестовый ключ для интеграции и проверки работоспособности
-          </p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="stages-entrance-box">
-          <div class="stages-entrance-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#wallet"></use>
-            </svg>
-          </div>
-          <h3>Пополните баланс</h3>
-          <p>На выбор есть оплата банк. картой, оплата по р/с и другие методы</p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="stages-entrance-box">
-          <div class="stages-entrance-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#account3"></use>
-            </svg>
-          </div>
-          <h3>Получайте информацию</h3>
-          <p>Получайте ответы от базы ГИБДД в максимально быстрый срок</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="callback p-60 bg-light-grey">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-7">
-        <h2>у вас остались вопросы?</h2>
-        <div class="box-text">
-          <p>Мы всегда рады помочь Вам с решением любых вопросов, выбирайте удобный тип связи</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="callback-box">
-          <div class="callback-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#telephone"></use>
-            </svg>
-          </div>
-          <div class="callback-box__text">
-            <h3>по вопросам оплаты</h3><a href="tel:+74958738765" class="phone">8 (495) 873 87 65</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="callback-box">
-          <div class="callback-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#email"></use>
-            </svg>
-          </div>
-          <div class="callback-box__text">
-            <h3>по любым вопросам</h3><a href="mailto:info@api-gibdd.ru" class="mail">info@api-gibdd.ru</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="callback-box">
-          <div class="callback-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#telegram"></use>
-            </svg>
-          </div>
-          <div class="callback-box__text">
-            <h3>по любым вопросам</h3><a href="tel:+74958738765" class="telegram-links">@bot_api_gibdd</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="question bg-light-grey">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-md-6 col-lg-7">
-        <h2>Вопросов больше нет</h2>
-        <div class="box-text">
-          <p>Получите ключ за 2 минуты пройдя регистрацию и приступайт к интеграции, мы всегда будем рады помочь!</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-5">
-        <a href="#" class="btn btn-blue" data-target="#modalRegistration" data-toggle="modal">Пройти регистрацию</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-lg-4">
-        <a href="index.html" class="logo">
-          <span class="logo-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#logo"></use></svg></span>
-          <span class="logo-text">API-GIBDD.RU</span>
-        </a>
-      </div>
-
-      <div class="col-6 col-lg-3 order-lg-1">
-        <div class="footer-box">
-          <div class="footer-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#phone"></use>
-            </svg>
-          </div>
-          <div class="footer-box__content">
-            <h3>Наш телефон</h3>
-            <a href="tel:+74958738765" class="phone">8 (495) 873 87 65</a>
-          </div>
-        </div>
-
-        <div class="footer-box">
-          <div class="footer-box__icon">
-            <svg class="svg-icon">
-              <use xlink:href="img/sprite.svg#mail"></use>
-            </svg>
-          </div>
-          <div class="footer-box__content">
-            <h3>Наш почта</h3>
-            <a href="mailto:info@api-gibdd.ru" class="mail">info@api-gibdd.ru</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-5">
-        <ul class="menu-footer">
-          <li><a href="#">Контакты</a></li>
-          <li><a href="#">Документация</a></li>
-          <li><a href="#">Стоимость</a></li>
-          <li><a href="#">Политики конфеденциальности</a></li>
-          <li><a href="#">Договор оферты</a></li>
-        </ul>
-      </div>
-
-
-    </div>
-  </div>
-</footer>
 
 <!-- Модальное окно -->
 <div class="modal fade" id="modalEntrance" tabindex="-1" aria-labelledby="modalEntranceLabel" aria-hidden="true">
