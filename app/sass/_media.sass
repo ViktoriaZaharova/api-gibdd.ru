@@ -27,9 +27,12 @@
     width: 100%
     li
       margin: 0 0 10px
+      a
+        color: #fff
       .active
         &:before
           bottom: -2px
+          background: #fff
 
 
   .btn-burger
@@ -90,7 +93,6 @@
     padding: 5px 20px
     font-size: 14px
     height: 50px
-    min-height: 50px
 
   .callback, .question
     .box-text
@@ -118,7 +120,6 @@
     font-size: 18px
 
 
-
   .modal-header
     margin: 0 0 20px
     p
@@ -131,6 +132,10 @@
   .whom
     padding: 40px 0 20px
 
+  header .btn
+    padding: 0 30px
+    height: 40px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px)
   .stages-entrance-box
@@ -142,6 +147,8 @@
 
   .question-two
     margin: 0
+
+
 
 @media only screen and (max-width: 480px)
   .btn-group

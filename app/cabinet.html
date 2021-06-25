@@ -29,17 +29,60 @@
 
 <body>
 
+<div class="wrapper">
+  <div class="header-cabinet">
+    <a href="index.html" class="logo-cabinet">API-GIBDD</a>
+    <div class="navbar-custom-menu">
+      <a href="#" class="btn btn-blue">Пополнить</a>
+      <ul class="nav navbar-nav">
+        <li class="dropdown messages-menu">
+          <label>
+            На счету: 0₽ (<span class="tooltip-bottom"
+                                data-tooltip="это сумма, которая заблокирована на счете по заявкам, которые на данный момент уже находятся в работе">заблокировано - 0₽</span>)
+          </label>
+        </li>
+
+        <li class="dropdown messages-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Стоимость заявки: 150₽
+          </a>
+        </li>
+
+        <li class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="hidden-xs">markof2019@yandex.ru</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="user-footer">
+              <div class="pull-left">
+                <button type="button" class="btn btn-link btn-flat" data-toggle="modal" data-target="#modal-pass">
+                  Сменить пароль
+                </button>
+              </div>
+              <div class="pull-right">
+                <a href="logout.php" class="btn btn-default btn-flat">Выйти</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
+
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-5 col-lg-3">
+      <div class="col-6 col-lg-3">
         <a href="index.html" class="logo">
           <span class="logo-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#logo"></use></svg></span>
           <span class="logo-text">API-GIBDD.RU</span>
         </a>
       </div>
 
-      <div class="col-7 col-lg-9 d-flex flex-wrap align-items-center">
+      <div class="col-6 col-lg-9 d-flex flex-wrap align-items-center">
         <ul class="menu">
           <li class="btn-close"></li>
           <li class="menu-item"><a href="index.html" class="menu-links active">API ГИБДД проверка авто</a></li>
@@ -74,8 +117,8 @@
           </div>
 
           <div class="btn-group">
-            <a href="#" class="btn btn-blue" data-toggle="modal" data-target="#modalRegistration">Попробовать бесплатно</a>
-            <a href="price.html" class="btn btn-border">Уточнить стоимость</a>
+            <a href="#" class="btn btn-blue">Попробовать бесплатно</a>
+            <a href="#" class="btn btn-border" data-toggle="modal" data-target="#modalPrice">Уточнить стоимость</a>
           </div>
         </div>
       </div>
@@ -178,7 +221,9 @@
 
       <div class="col-12 col-lg-4">
         <div class="testing-work-box">
-          <svg class="svg-icon testing-work-box__decor"><use xlink:href="img/sprite.svg#settings"></use></svg>
+          <svg class="svg-icon testing-work-box__decor">
+            <use xlink:href="img/sprite.svg#settings"></use>
+          </svg>
           <div class="testing-work-box__top">
             <div class="testing-work-box__icon">
               <svg class="svg-icon">
@@ -399,9 +444,12 @@
       <div class="modal-header">
         <h5>Вход в систему</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <svg class="svg-icon"><use xlink:href="img/sprite.svg#close"></use></svg>
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
         </button>
-        <p>Я забыл пароль: <a href="#" class="links-blue" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#modalEntrance2">восстановить</a></p>
+        <p>Я забыл пароль: <a href="#" class="links-blue" data-toggle="modal" data-dismiss="modal" aria-label="Close"
+                              data-target="#modalEntrance2">восстановить</a></p>
       </div>
       <div class="modal-body">
         <form method="post" class="form">
@@ -422,15 +470,19 @@
   </div>
 </div>
 
-<div class="modal fade" id="modalRegistration" tabindex="-1" aria-labelledby="modalRegistrationLabel" aria-hidden="true">
+<div class="modal fade" id="modalRegistration" tabindex="-1" aria-labelledby="modalRegistrationLabel"
+     aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5>Регистрация</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <svg class="svg-icon"><use xlink:href="img/sprite.svg#close"></use></svg>
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
         </button>
-        <p>Уже есть аккаунт <a href="#" class="links-blue" data-toggle="modal" data-dismiss="modal" aria-label="Close" data-target="#modalEntrance">Войти</a></p>
+        <p>Уже есть аккаунт <a href="#" class="links-blue" data-toggle="modal" data-dismiss="modal" aria-label="Close"
+                               data-target="#modalEntrance">Войти</a></p>
       </div>
       <div class="modal-body">
         <form method="post" class="form">
@@ -473,7 +525,9 @@
       <div class="modal-header">
         <h5>Восстановление пароля</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <svg class="svg-icon"><use xlink:href="img/sprite.svg#close"></use></svg>
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
         </button>
       </div>
       <div class="modal-body">
