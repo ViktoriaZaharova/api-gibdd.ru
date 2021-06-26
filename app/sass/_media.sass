@@ -11,6 +11,9 @@
   .modal-content
     min-height: auto
 
+  .header-cabinet .btn
+    padding: 0 15px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
   .menu
@@ -86,6 +89,41 @@
   .testing-work-box__decor
     left: 0
 
+  .messages-menu, .user-menu
+    font-size: 12px
+
+  .header-cabinet .btn
+    font-size: 12px
+
+  .btn-sidebar
+    display: flex
+
+  .main-sidebar
+    display: none
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 3
+    height: 100%
+    background: #fff
+    overflow-y: auto
+
+  .content-wrapper
+    width: 100%
+
+  .sidebar-close
+    display: flex
+
+  .navbar-static-top
+    order: 1
+    margin: 20px auto 0
+    width: 100%
+    justify-content: center
+
+  .navbar-custom-menu
+    justify-content: center
+    width: 100%
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
@@ -136,6 +174,38 @@
     padding: 0 30px
     height: 40px
 
+  .list-dashboard
+    padding: 0
+    font-size: 14px
+    li
+      margin: 0 0 12px
+
+  .dashboard-box
+    .date
+      order: -1
+      position: relative
+      left: 0
+      top: 0
+      transform: none
+      text-align: center
+      margin: 0 auto 20px
+
+  .question-box
+    margin: 30px 0 0
+
+  .timeline > li
+    margin-right: 0
+
+  .timeline-item
+    margin-right: 0
+
+  .navbar-custom-menu
+    flex-direction: column
+    align-items: center
+    .btn
+      margin: 20px auto 0
+      order: 1
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px)
   .stages-entrance-box
@@ -148,7 +218,8 @@
   .question-two
     margin: 0
 
-
+  .header-cabinet .navbar-nav > li
+    margin: 0 auto 5px
 
 @media only screen and (max-width: 480px)
   .btn-group
@@ -197,5 +268,10 @@
     justify-content: space-around
     li
       margin: 0 0 10px 0
+
+  .timeline-header
+    flex-wrap: wrap
+
+
 
 
