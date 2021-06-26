@@ -1423,6 +1423,92 @@ footer {
     background: #2F80ED;
     display: block; }
 
+.box {
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  border-top: 3px solid #2F80ED;
+  margin-bottom: 20px;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  .box label {
+    font-size: 14px;
+    font-weight: 500; }
+  .box .btn {
+    padding: 0 10px;
+    margin: 20px auto 0;
+    height: 50px;
+    width: 100%; }
+
+.box-header {
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #f4f4f4; }
+  .box-header h3 {
+    font-size: 18px;
+    margin: 0; }
+
+.box-body {
+  border-radius: 0 0 3px 3px;
+  padding: 10px; }
+
+.smt_apicontent {
+  margin-bottom: 30px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  padding: 30px;
+  border-radius: 7px; }
+  .smt_apicontent .box-text {
+    margin: 20px 0 0; }
+    .smt_apicontent .box-text p {
+      margin: 0 0 5px; }
+    .smt_apicontent .box-text h3 {
+      font-size: 18px;
+      margin: 0 0 10px; }
+  .smt_apicontent table td {
+    border: 1px solid #f4f4f4;
+    background: #f9fafc; }
+    .smt_apicontent table td:last-child {
+      width: 80%; }
+    .smt_apicontent table td a {
+      font-weight: 500;
+      color: #2F80ED; }
+
+.smt_apicontent .smtcode_resp {
+  display: block;
+  overflow-x: auto;
+  background: #f1efee;
+  color: #68615e;
+  padding: 0.5em;
+  -webkit-text-size-adjust: none;
+  word-break: break-all;
+  font-size: 14px; }
+
+.smt_apicontent .smtcode_key {
+  color: #f22c40; }
+
+.smt_apicontent .smtcode_value {
+  color: #7b9726; }
+
+.table {
+  font-size: 14px;
+  margin-bottom: 20px; }
+
+.smt_apicontent table.table td {
+  background: #fff; }
+  .smt_apicontent table.table td:last-child {
+    background: #f9fafc;
+    width: 80%; }
+
+.smtcode_resp {
+  margin-bottom: 20px; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {

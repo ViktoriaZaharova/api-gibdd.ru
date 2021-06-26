@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="RU">
+
+<head>
+  <meta charset="utf-8">
+  <title>API-GIBDD.RU</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="header-cabinet">
+    <a href="index.html" class="logo">
+      <span class="logo-icon"><svg class="svg-icon"><use xlink:href="img/sprite.svg#logo"></use></svg></span>
+      <span class="logo-text">API-GIBDD.RU</span>
+    </a>
+
+    <nav class="navbar navbar-static-top">
+
+      <div class="navbar-custom-menu">
+        <a href="#" class="btn btn-blue">Пополнить</a>
+        <ul class="nav navbar-nav">
+          <li class="dropdown messages-menu">
+            <label>
+              На счету: 0₽ (<span class="tooltip-item" data-toggle="tooltip" data-placement="bottom"
+                                  title="это сумма, которая заблокирована на счете по заявкам, которые на данный момент уже находятся в работе">Запросов: 450 шт</span>)
+            </label>
+          </li>
+
+          <li class="dropdown messages-menu">
+            <a href="#">
+              Стоимость заявки: 150₽
+            </a>
+          </li>
+
+          <li class="dropdown user user-menu">
+            <a href="#">
+              <span class="hidden-xs">markof2019@yandex.ru</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="btn-sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div class="main-wrapper">
+    <div class="main-sidebar">
+      <div class="sidebar-close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+      <div class="main-sidebar-item">
+        <h3>Кабинет</h3>
+        <ul class="menu-sidebar">
+          <li>
+            <a href="cabinet.html" class="menu-sidebar-links"><i class="fa fa-dashboard"></i>
+              <span class="menu-sidebar-links__text">Dashboard</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-sidebar-item">
+        <h3>Финансы</h3>
+        <ul class="menu-sidebar">
+          <li>
+            <a href="cabinet-balance.html" class="menu-sidebar-links"><i class="fa fa-credit-card"></i>
+              <span class="menu-sidebar-links__text">Пополнение баланса</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-sidebar-item">
+        <h3>Настройки</h3>
+        <ul class="menu-sidebar">
+          <li>
+            <a href="cabinet-api.html" class="menu-sidebar-links"><i class="fa fa-code"></i>
+              <span class="menu-sidebar-links__text">Доступ к API</span></a>
+          </li>
+          <li>
+            <a href="#" class="menu-sidebar-links" data-target="#modalExit" data-toggle="modal"><i
+                class="fa fa-sign-out"></i>
+              <span class="menu-sidebar-links__text">Выход</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-12">
+            <h1>Настройки</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+            <div class="box box-primary">
+              <div class="box-header with-border">
+                <h3 class="box-title">Настройки доступа к API</h3>
+              </div>
+              <!--<form role="form" class="settings">-->
+              <div class="box-body">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Ваш API-key:</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control" id="api_key" value="" disabled="">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox-inp">
+                      <span class="checkbox-custom"></span>
+                      <span class="checkbox-text">Разрешить доступ к API</span>
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <button class="btn btn-blue">Сгенерировать</button>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <button class="btn btn-border">Сохранить</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--</form>-->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-lg-10 offset-lg-1">
+            <div class="smt_apicontent">
+              <h2>Документация API сервиса API-GIBDD.RU</h2>
+
+              <div class="box-text">
+                <h3>Авторизация</h3>
+                <p>API интерфейс используется для того, чтобы интегрировать возможности сервиса в личный проект клиента.
+                  API предназначен для разработчиков и сопровождается детальной документацией.</p>
+              </div>
+
+              <div class="box-text">
+                <h3>Описание</h3>
+                <p>API сервиса API-GIBDD работает по протоколу HTTP и представляет собой набор методов, с помощью
+                  которых совершаются запросы и возвращаются ответы для каждой операции. Все ответы приходят в виде JSON
+                  структур.
+                </p>
+              </div>
+              <div class="box-text">
+                <h3>Авторизация</h3>
+                <p>Процесс авторизации возможен только при наличии персонального ключа (API-key), которым в дальнейшем
+                  сопровождается каждый запрос к API. Необходимый ключ можно получить в личном кабинете во вкладке API.
+                </p>
+              </div>
+
+              <div class="box-text">
+                <h3>Формат входящего запроса </h3>
+                <p>API сервиса позволяет получать данные, принимая разные варианты запросов, если у Вас уже реализовано
+                  обращение к стороннему API, Вы можете легко и без особых изменений получать информацию посредством
+                  нашего, изменения коснуться только домена и токена. В примере ниже будет рассмотрен формат, с которым
+                  работает сам официальный сервис ГИБДД. Ниже в пример API-key передается в параметре reCaptchaToken.
+                </p>
+              </div>
+
+              <div class="box-text">
+                <h3>История регистрации</h3>
+                <p>Получить актуальную историю регистрационных действий можно выполнив следующий запрос:
+                </p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a
+                        href="https://api-gibdd.ru/proxy/check/auto/history?checkType=history&vin=W0L0SDL0886184973&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713"
+                        target="_blank">https://api-gibdd.ru/proxy/check/auto/history?checkType=history&vin=W0L0SDL0886184973&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713</a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <p>Пример ответа:</p>
+
+                <pre class="smtcode_resp">
+                  <code class="json">{
+                    <span class="smtcode_key">"requestTime"</span>: <span
+                        class="smtcode_value">"21.06.2021 15:10",</span>
+                    <span class="smtcode_key">"RequestResult"</span>: {
+                    <span class="smtcode_value">"ownershipPeriod":</span> [
+                        {
+                        <span class="smtcode_key">"lastOperation":</span> <span class="smtcode_value">"11",</span>
+                        <span class="smtcode_key">"simplePersonType":</span> <span
+                        class="smtcode_value">"Natural",</span>
+                        <span class="smtcode_key">"from":</span> <span class="smtcode_value">"2008-09-16",</span>
+                        <span class="smtcode_key">"to":</span> <span class="smtcode_value">"2012-08-21"</span>
+                        },
+                        {
+                          <span class="smtcode_key">"lastOperation":</span> <span class="smtcode_value">"62",</span>
+                          <span class="smtcode_key">"simplePersonType":</span> <span
+                        class="smtcode_value">"Natural",</span>
+                          <span class="smtcode_key">"from":</span> <span class="smtcode_value">"2012-08-21",</span>
+                          <span class="smtcode_key">"to":</span> <span class="smtcode_value">"2012-08-21"</span>
+                        },
+                        {
+                          <span class="smtcode_key">"lastOperation":</span> <span class="smtcode_value">"12",</span>
+                          <span class="smtcode_key">"simplePersonType":</span> <span
+                        class="smtcode_value">"Natural",</span>
+                          <span class="smtcode_key">"from":</span> <span class="smtcode_value">"2012-09-01"</span>
+                        }
+                      ]
+                    },
+                    <span class="smtcode_key">"ownershipPeriod":</span> {
+                    <span class="smtcode_key">"number":</span> <span class="smtcode_value">"77УВ604674",</span>
+                    <span class="smtcode_key">"issue":</span> <span class="smtcode_value">"ТАМОЖНЯ: 10009140"</span>
+                    },
+                  }</code>
+              </pre>
+
+              </div>
+              <div class="box-text">
+                <h3>Создание заявки</h3>
+                <p>Для того, чтобы создать заявку необходимо отправить запрос с обязательными параметрами.</p>
+
+                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>lastName</td>
+                    <td>Фамилия</td>
+                  </tr>
+                  <tr>
+                    <td>name</td>
+                    <td>Имя</td>
+                  </tr>
+
+                  <tr>
+                    <td>dateOfBirdth</td>
+                    <td>Дата рождения</td>
+                  </tr>
+                  <tr>
+                    <td>driverLicense</td>
+                    <td>Текущие водительские права</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p><span style="text-decoration: underline;">Необязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>middleName</td>
+                    <td>Отчество</td>
+                  </tr>
+                  <tr>
+                    <td>oldDriverLicense</td>
+                    <td>Предыдущие водительские права</td>
+                  </tr>
+                  <tr>
+                    <td>oldLastName</td>
+                    <td>Предыдущая фамилия водителя</td>
+                  </tr>
+                  <tr>
+                    <td>perenosKBM</td>
+                    <td>Перенос КБМ со старых прав</td>
+                  </tr>
+                  <tr>
+                    <td>phone</td>
+                    <td>Телефон для уведомления</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример запроса:</p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a
+                        href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/create/?lastName=Иванов&amp;name=Сергей&amp;middleName=Фёдорович&amp;dateOfBirdth=12.12.1964&amp;driverLicense=11АА%20123456&amp;perenosKBM=0"
+                        target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/create/?lastName=Иванов&amp;name=Сергей&amp;middleName=Фёдорович&amp;dateOfBirdth=12.12.1964&amp;driverLicense=11АА
+                      123456&amp;perenosKBM=0</a></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример ответа при успешном создании заявки:</p>
+                <pre class="smtcode_resp">    <code class="json">{
+        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
+        <span class="smtcode_key">data</span>: {
+            <span class="smtcode_key">ticketId</span>: <span class="smtcode_value">3837,</span>
+            <span class="smtcode_key">kbmWhenCreating</span>: <span class="smtcode_value">0.8</span>
+        }
+    }</code>
+</pre>
+
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>005</td>
+                    <td>This ticket already exists / Такая заявка уже существует. Её ID - ID_TICKET</td>
+                  </tr>
+                  <tr>
+                    <td>006</td>
+                    <td>Ticket creation rejected. The current coefficient is 0.5 / Создание заявки отклонено. Текущий
+                      КБМ
+                      равен 0.5
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>007</td>
+                    <td>Failed to query current coefficient / Не удалось получить текущий КБМ</td>
+                  </tr>
+                  <tr>
+                    <td>008</td>
+                    <td>Agent ID not specified / Не указан ID агента</td>
+                  </tr>
+                  <tr>
+                    <td>010</td>
+                    <td>Missing lastName parameter / Отсутствует обязательный параметр lastName</td>
+                  </tr>
+                  <tr>
+                    <td>011</td>
+                    <td>Invalid lastName parameter / Некорректный параметр lastName</td>
+                  </tr>
+                  <tr>
+                    <td>012</td>
+                    <td>Missing name parameter / Отсутствует обязательный параметр name</td>
+                  </tr>
+                  <tr>
+                    <td>013</td>
+                    <td>Invalid name parameter / Некорректный параметр name</td>
+                  </tr>
+
+                  <tr>
+                    <td>015</td>
+                    <td>Invalid middleName parameter / Некорректный параметр middleName</td>
+                  </tr>
+                  <tr>
+                    <td>016</td>
+                    <td>Missing dateOfBirdth parameter / Отсутствует обязательный параметр dateOfBirdth</td>
+                  </tr>
+                  <tr>
+                    <td>017</td>
+                    <td>Invalid dateOfBirdth parameter / Некорректный параметр dateOfBirdth</td>
+                  </tr>
+                  <tr>
+                    <td>018</td>
+                    <td>Driver under 18 years old / Водителю менее 18ти лет</td>
+                  </tr>
+                  <tr>
+                    <td>020</td>
+                    <td>Missing driverLicense parameter / Отсутствует обязательный параметр driverLicense</td>
+                  </tr>
+                  <tr>
+                    <td>021</td>
+                    <td>Invalid driverLicense parameter / Некорректный параметр driverLicense</td>
+                  </tr>
+                  <tr>
+                    <td>022</td>
+                    <td>Invalid oldDriverLicense parameter / Некорректный параметр oldDriverLicense</td>
+                  </tr>
+                  <tr>
+                    <td>023</td>
+                    <td>Invalid oldLastName parameter / Некорректный параметр oldLastName</td>
+                  </tr>
+                  <tr>
+                    <td>024</td>
+                    <td>Invalid phone parameter / Некорректный параметр phone</td>
+                  </tr>
+                  <tr>
+                    <td>019</td>
+                    <td>Insufficient funds in the account / Недостаточно средств</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="box-text">
+
+                <h3>Редактирование заявки</h3>
+                <p>Для того, чтобы изменить заявку необходимо отправить запрос с обязательными параметрами.</p>
+
+                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>id</td>
+                    <td>ID заявки</td>
+                  </tr>
+                  <tr>
+                    <td>lastName</td>
+                    <td>Фамилия</td>
+                  </tr>
+                  <tr>
+                    <td>name</td>
+                    <td>Имя</td>
+                  </tr>
+                  <tr>
+                    <td>dateOfBirdth</td>
+                    <td>Дата рождения</td>
+                  </tr>
+                  <tr>
+                    <td>driverLicense</td>
+                    <td>Текущие водительские права</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p><span style="text-decoration: underline;">Необязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>middleName</td>
+                    <td>Отчество</td>
+                  </tr>
+                  <tr>
+                    <td>oldDriverLicense</td>
+                    <td>Предыдущие водительские права</td>
+                  </tr>
+                  <tr>
+                    <td>oldLastName</td>
+                    <td>Предыдущая фамилия водителя</td>
+                  </tr>
+                  <tr>
+                    <td>phone</td>
+                    <td>Телефон для уведомления</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример запроса:</p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a
+                        href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/edit/?id=3837&amp;lastName=Иванов&amp;name=Сергей&amp;middleName=Петрович&amp;dateOfBirdth=12.12.1964&amp;driverLicense=11АА%20123456"
+                        target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/edit/?id=3837&amp;lastName=Иванов&amp;name=Сергей&amp;middleName=Петрович&amp;dateOfBirdth=12.12.1964&amp;driverLicense=11АА
+                      123456</a></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример ответа при успешном редактировании заявки:</p>
+                <pre class="smtcode_resp">    <code class="json">{
+        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
+        <span class="smtcode_key">message</span>: <span class="smtcode_value">Ticket changes saved successfully</span>
+    }</code>
+</pre>
+
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>002</td>
+                    <td>Invalid ID Ticket / Некорректный параметр id</td>
+                  </tr>
+                  <tr>
+                    <td>004</td>
+                    <td>Ticket with this ID not found / Заявка с указанным ID не найдена</td>
+                  </tr>
+                  <tr>
+                    <td>010</td>
+                    <td>Missing lastName parameter / Отсутствует обязательный параметр lastName</td>
+                  </tr>
+                  <tr>
+                    <td>011</td>
+                    <td>Invalid lastName parameter / Некорректный параметр lastName</td>
+                  </tr>
+                  <tr>
+                    <td>012</td>
+                    <td>Missing name parameter / Отсутствует обязательный параметр name</td>
+                  </tr>
+                  <tr>
+                    <td>013</td>
+                    <td>Invalid name parameter / Некорректный параметр name</td>
+                  </tr>
+
+                  <tr>
+                    <td>015</td>
+                    <td>Invalid middleName parameter / Некорректный параметр middleName</td>
+                  </tr>
+                  <tr>
+                    <td>016</td>
+                    <td>Missing dateOfBirdth parameter / Отсутствует обязательный параметр dateOfBirdth</td>
+                  </tr>
+                  <tr>
+                    <td>017</td>
+                    <td>Invalid dateOfBirdth parameter / Некорректный параметр dateOfBirdth</td>
+                  </tr>
+                  <tr>
+                    <td>018</td>
+                    <td>Driver under 18 years old / Водителю менее 18ти лет</td>
+                  </tr>
+                  <tr>
+                    <td>020</td>
+                    <td>Missing driverLicense parameter / Отсутствует обязательный параметр driverLicense</td>
+                  </tr>
+                  <tr>
+                    <td>021</td>
+                    <td>Invalid driverLicense parameter / Некорректный параметр driverLicense</td>
+                  </tr>
+                  <tr>
+                    <td>022</td>
+                    <td>Invalid oldDriverLicense parameter / Некорректный параметр oldDriverLicense</td>
+                  </tr>
+                  <tr>
+                    <td>023</td>
+                    <td>Invalid oldLastName parameter / Некорректный параметр oldLastName</td>
+                  </tr>
+                  <tr>
+                    <td>024</td>
+                    <td>Invalid phone parameter / Некорректный параметр phone</td>
+                  </tr>
+                  <tr>
+                    <td>027</td>
+                    <td>This ticket is already in operation / Данная заявка уже в работе</td>
+                  </tr>
+                  <tr>
+                    <td>028</td>
+                    <td>This ticket is already closed / Данная заявка уже закрыта</td>
+                  </tr>
+                  <tr>
+                    <td>029</td>
+                    <td>This ticket has been deleted / Данная заявка удалена</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <div class="box-text">
+                <h3>Статус заявки</h3>
+                <p>Получить актуальную инфомацию о заявке (дата и время подачи, стоимость заявки) можно выполнив
+                  следующий
+                  запрос:</p>
+
+                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>id</td>
+                    <td>Идентификатор заявки</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример запроса:</p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/info/?id=10" target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/info/?id=100</a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример ответа:</p>
+                <pre class="smtcode_resp">                        <code class="json">{
+                            <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
+                            <span class="smtcode_key">data</span>: {
+                                <span class="smtcode_key">dateCreate</span>: <span class="smtcode_value">2019-08-15 11:11:15,</span>
+                                <span class="smtcode_key">status</span>: <span class="smtcode_value">new</span>
+                            }
+                        }</code>
+                    </pre>
+
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>002</td>
+                    <td>Invalid ID Ticket / Некорректный ID заявки</td>
+                  </tr>
+                  <tr>
+                    <td>026</td>
+                    <td>Missing id parameter / Отсутствует обязательный параметр - id.</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="box-text">
+                <h3>Удаление заявки</h3>
+                <p>Для того, чтобы удалить заявку необходимо отправить запрос с обязательными параметрами.</p>
+
+                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>id</td>
+                    <td>ID заявки</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример запроса:</p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/delete/?id=10" target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/delete/?id=10</a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример ответа при успешном удалени заявки:</p>
+                <pre class="smtcode_resp">    <code class="json">{
+        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
+        <span class="smtcode_key">message</span>: <span
+                      class="smtcode_value">Ticket deletion completed successfully</span>
+    }</code>
+</pre>
+
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>002</td>
+                    <td>Invalid ID Ticket / Некорректный параметр id</td>
+                  </tr>
+                  <tr>
+                    <td>004</td>
+                    <td>Ticket with this ID not found / Заявка с указанным ID не найдена</td>
+                  </tr>
+                  <tr>
+                    <td>027</td>
+                    <td>This ticket is already in operation / Данная заявка уже в работе</td>
+                  </tr>
+                  <tr>
+                    <td>028</td>
+                    <td>This ticket is already closed / Данная заявка уже закрыта</td>
+                  </tr>
+                  <tr>
+                    <td>029</td>
+                    <td>This ticket has been deleted / Данная заявка удалена</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+
+                <h3>Запрос списка последних заявок</h3>
+                <p>Для того, чтобы получить список последних заявок необходимо отправить запрос с обязательными
+                  параметрами.</p>
+
+                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>countday</td>
+                    <td>количество дней (не более 14)</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример запроса:</p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/getlist/?countday=7" target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/getlist/?countday=7</a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример ответа при успешном создании заявки:</p>
+                <pre class="smtcode_resp">    <code class="json">{
+        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
+        <span class="smtcode_key">data</span>: {
+        {
+            <span class="smtcode_key">ticketId</span>: <span class="smtcode_value">3687,</span>
+            <span class="smtcode_key">dateCreate</span>: <span class="smtcode_value">2019-11-17 15:32:29,</span>
+            <span class="smtcode_key">fio</span>: <span class="smtcode_value">Иванов Сергей Петрович,</span>
+            <span class="smtcode_key">kbmWhenCreating</span>: <span class="smtcode_value">1.0,</span>
+            <span class="smtcode_key">status</span>: <span class="smtcode_value">new</span>
+        },{
+            <span class="smtcode_key">ticketId</span>: <span class="smtcode_value">3651,</span>
+            <span class="smtcode_key">dateCreate</span>: <span class="smtcode_value">2019-08-17 13:02:38,</span>
+            <span class="smtcode_key">dateClose</span>: <span class="smtcode_value">2019-08-18</span>
+            <span class="smtcode_key">fio</span>: <span class="smtcode_value">Иванова Елена Павловна,</span>
+            <span class="smtcode_key">kbmWhenCreating</span>: <span class="smtcode_value">1.1,</span>
+            <span class="smtcode_key">kbmWhenClose</span>: <span class="smtcode_value">0.8,</span>
+            <span class="smtcode_key">status</span>: <span class="smtcode_value">done</span>
+        }
+    }</code>
+</pre>
+
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>030</td>
+                    <td>Missing countday parameter / Отсутствует обязательный параметр countday</td>
+                  </tr>
+                  <tr>
+                    <td>031</td>
+                    <td>Invalid countday parameter / Некорректный параметр countday</td>
+                  </tr>
+                  <tr>
+                    <td>032</td>
+                    <td>The parameter countday must not exceed 14 days / Параметр countday не должен превышать 14</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <h3>Демо-режим</h3>
+                <p>Дополнительно имеется так называемый демо-режим, на котором Вы можете протестировать запросы и ответы
+                  на них не создавая реальных заявок.</p>
+
+                <p>Для того, чтобы воспользоваться демо-режимом, достаточно в ссылке запроса изменить **api** на
+                  **demo-api**.</p>
+                <p>Например ,чтобы получить актуальную инфомацию об аккаунте в режиме demo:</p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a href="https://05kbm.ru/lka/demo-api/v1/YOUR_API_KEY/account/info" target="_blank">https://05kbm.ru/lka/demo-api/v1/YOUR_API_KEY/account/info</a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="box-text">
+
+                <h3>Запрос истории водительских прав</h3>
+                <p>Получить историю водительских прав можно выполнив запрос:</p>
+
+                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>fio</td>
+                    <td>ФИО водителя</td>
+                  </tr>
+                  <tr>
+                    <td>driverLicense</td>
+                    <td>Серия и номер водительского удостоверения</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример запроса:</p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a
+                        href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/create/?fio=Иванов Иван Иванович&amp;driverLicense=1111 321321"
+                        target="_blank">
+                      https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/create/?fio=Иванов Иван Иванович&amp;driverLicense=1111
+                      321321 </a></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример ответа:</p>
+                <pre class="smtcode_resp">    <code class="json">{
+        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
+        <span class="smtcode_key">data</span>: {
+            <span class="smtcode_value">requestId</span>: <span class="smtcode_value">352</span>
+        }
+    }</code>
+                    </pre>
+
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>035</td>
+                    <td>Missing fio parameter</td>
+                  </tr>
+                  <tr>
+                    <td>020</td>
+                    <td>Missing driverLicense parameter / Отсутствует обязательный параметр - driverLicense.</td>
+                  </tr>
+                  <tr>
+                    <td>038</td>
+                    <td>Invalid fio parameter / Отсутствует обязательный параметр - fio.</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="box-text">
+
+                <h3>Получение истории водительских прав по ID запроса:</h3>
+
+                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>requestId</td>
+                    <td>ID запроса</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример запроса:</p>
+                <table class="table table-hover table-bordered smtcode">
+                  <tbody>
+                  <tr>
+                    <td><a href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/info/?requestId=317"
+                           target="_blank">
+                      https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/info/?requestId=317 </a></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <p>Пример ответа:</p>
+                <pre class="smtcode_resp">    <code class="json">{
+        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
+        <span class="smtcode_key">data</span>: {
+            <span class="smtcode_value">result</span>: [
+                {
+                    <span class="smtcode_key">vu</span>: <span class="smtcode_value">11АА987654</span>,
+                    <span class="smtcode_key">date_vid</span>: <span class="smtcode_value">16.01.2004</span>,
+                    <span class="smtcode_key">srok</span>: <span class="smtcode_value">16.01.2014</span>,
+                    <span class="smtcode_key">osn</span>: <span
+                      class="smtcode_value">Первичная выдача после обучения</span>
+                    <span class="smtcode_key">date_proc</span>: <span class="smtcode_value">02.04.2013</span>
+                    <span class="smtcode_key">doc_type</span>: <span class="smtcode_value">Водительское удостоверение (приказ МВД России №356-09)</span>
+                },
+                {
+                    <span class="smtcode_key">vu</span>: <span class="smtcode_value">22ВВ456789</span>,
+                    <span class="smtcode_key">date_vid</span>: <span class="smtcode_value">23.05.2007</span>,
+                    <span class="smtcode_key">srok</span>: <span class="smtcode_value">23.05.2017</span>,
+                    <span class="smtcode_key">osn</span>: <span
+                      class="smtcode_value">Первичная выдача после обучения</span>
+                    <span class="smtcode_key">date_proc</span>: <span class="smtcode_value">02.04.2017</span>
+                    <span class="smtcode_key">doc_type</span>: <span class="smtcode_value">Водительское удостоверение (приказ МВД России №356-09)</span>
+                }
+            ]
+        }
+    }</code>
+                    </pre>
+
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <table class="table table-hover table-bordered">
+                  <tbody>
+                  <tr>
+                    <td>037</td>
+                    <td>Missing requestId parameter</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright">Copyright © 2018-2019. All rights reserved.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- Модальное окно -->
+<div class="modal fade" id="modalEntrance" tabindex="-1" aria-labelledby="modalEntranceLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Вход в систему</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <p>Я забыл пароль: <a href="#" class="links-blue" data-toggle="modal" data-dismiss="modal" aria-label="Close"
+                              data-target="#modalEntrance2">восстановить</a></p>
+      </div>
+      <div class="modal-body">
+        <form method="post" class="form">
+          <label><input type="text" placeholder="Ваша почта" name="mail"></label>
+          <label><input type="text" placeholder="Пароль" name="password"></label>
+
+          <button type="submit" class="btn btn-blue">Войти в систему</button>
+
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox-inp" checked>
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">Согласен на правила обработки персональных данных</span>
+          </label>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-thanks fade" id="modalExit" tabindex="-1" aria-labelledby="modalExitLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+      </div>
+      <div class="modal-body">
+        <h5>Вы действительно хотите выйти?</h5>
+        <div class="btn-group">
+          <a href="#" class="btn btn-blue" data-dismiss="modal" aria-label="Close">Да</a>
+          <a href="cabinet.html" class="btn btn-border">Нет</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalRegistration" tabindex="-1" aria-labelledby="modalRegistrationLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Регистрация</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <p>Уже есть аккаунт <a href="#" class="links-blue" data-toggle="modal" data-dismiss="modal" aria-label="Close"
+                               data-target="#modalEntrance">Войти</a></p>
+      </div>
+      <div class="modal-body">
+        <form method="post" class="form">
+          <label><input type="text" placeholder="Ваша почта" name="mail"></label>
+          <label><input type="text" placeholder="Пароль" name="password"></label>
+          <label><input type="text" placeholder="Повторите пароль еще раз" name="double_password"></label>
+
+          <div class="form-item">
+            <h3>Какой вид API вам нужен?</h3>
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox-inp" checked>
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Проверка автомобиля</span>
+            </label>
+
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox-inp" checked>
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">Проверка штрафов</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-blue">Зарегистрироваться</button>
+
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox-inp" checked>
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">Согласен на правила обработки персональных данных</span>
+          </label>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEntrance2" tabindex="-1" aria-labelledby="modalEntrance2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Восстановление пароля</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" class="form">
+          <label><input type="text" placeholder="Ваша почта" name="mail"></label>
+          <label><input type="text" placeholder="Ваш электронный ключ" name="password"></label>
+
+          <button type="submit" class="btn btn-blue">Восстановить пароль</button>
+
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox-inp" checked>
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">Согласен на правила обработки персональных данных</span>
+          </label>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>
