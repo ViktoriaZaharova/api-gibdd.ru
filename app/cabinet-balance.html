@@ -178,11 +178,8 @@
                       </p></div>
                   </div>
                   <div class="btn-group">
-                    <button type="submit" id="submitPC" name="paymentType" value="PC" class="btn btn-blue"
-                            data-field="sum">Оплата через р/с
-                    </button>
-                    <button type="submit" id="submitAC" name="paymentType" value="AC" class="btn btn-blue"
-                            data-field="sum">Банковская карта
+                    <button type="button" class="btn btn-blue" data-toggle="modal" data-target="#modalPrice">Оплата через р/с</button>
+                    <button type="button" class="btn btn-blue">Банковская карта
                     </button>
                   </div>
                 </div>
@@ -394,6 +391,50 @@
             <input type="checkbox" class="checkbox-inp" checked>
             <span class="checkbox-custom"></span>
             <span class="checkbox-text">Согласен на правила обработки персональных данных</span>
+          </label>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalPrice" tabindex="-1" aria-labelledby="modalPriceLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Заполните данные для счета</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <svg class="svg-icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" class="form">
+          <label><input type="text" placeholder="Наиминование: ИП Петов  Петр Сергеевич" name="name"></label>
+          <label><input type="text" placeholder="ИНН" name="inn"></label>
+          <label><input type="text" placeholder="КПП (необязательно)" name="kpp"></label>
+          <label><input type="text" placeholder="Расчетный счет:  408028...." name="val-num"></label>
+          <label><input type="text" placeholder="Наименование банка" name="name-bank"></label>
+          <label><input type="text" placeholder="БИК" name="bik"></label>
+          <label><input type="text" placeholder="Корр. счет" name="cor"></label>
+          <label><input type="text" placeholder="Юридический адрес" name="address"></label>
+          <label><input type="text" placeholder="ФИО директора (отв. лица)" name="name"></label>
+          <label><input type="text" placeholder="Контактный телефон" name="phone"></label>
+          <label><input type="text" placeholder="Сумма платежа:" name="sum"></label>
+
+          <div class="description-text">
+            <p>Пополнение по безналичному переводу возможно на сумму не менее 10 000 руб. Комиссия при пополнении счета
+              через банк составляет 6.5%</p>
+          </div>
+
+          <button type="submit" class="btn btn-blue">Сформировать счет на оплату</button>
+
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox-inp" checked>
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">Мне нужен бумажный акт о выполненных работах</span>
           </label>
         </form>
       </div>
