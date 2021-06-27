@@ -245,432 +245,275 @@
                         }
                       ]
                     },
-                    <span class="smtcode_key">"ownershipPeriod":</span> {
-                    <span class="smtcode_key">"number":</span> <span class="smtcode_value">"77УВ604674",</span>
-                    <span class="smtcode_key">"issue":</span> <span class="smtcode_value">"ТАМОЖНЯ: 10009140"</span>
+                      <span class="smtcode_key">"ownershipPeriod":</span> {
+                      <span class="smtcode_key">"number":</span> <span class="smtcode_value">"77УВ604674",</span>
+                      <span class="smtcode_key">"issue":</span> <span class="smtcode_value">"ТАМОЖНЯ: 10009140"</span>
                     },
-                  }</code>
+                      <span class="smtcode_key">"vehicle":</span> {
+                      <span class="smtcode_key">"engineVolume":</span> <span class="smtcode_value">"1364.0",</span>
+                      <span class="smtcode_key">"color":</span> <span class="smtcode_value">"КРАСНЫЙ",</span>
+                      <span class="smtcode_key">"bodyNumber":</span> <span
+                        class="smtcode_value">"W0L0SDL0886184973",</span>
+                      <span class="smtcode_key">"year":</span> <span class="smtcode_value">"2008",</span>
+                      <span class="smtcode_key">"engineNumber":</span> <span class="smtcode_value">"19РZ2269",</span>
+                      <span class="smtcode_key">"vin":</span> <span class="smtcode_value">"W0L0SDL0886184973",</span>
+                      <span class="smtcode_key">"model":</span> <span class="smtcode_value">"ОПЕЛЬ КОРСА",</span>
+                      <span class="smtcode_key">"category":</span> <span class="smtcode_value">"В",</span>
+                      <span class="smtcode_key">"type":</span> <span class="smtcode_value">"29",</span>
+                      <span class="smtcode_key">"powerHp":</span> <span class="smtcode_value">"0.0",</span>
+                      <span class="smtcode_key">"powerKwt":</span> <span class="smtcode_value">"66"</span>
+                    }
+                  },
+                    <span class="smtcode_key">"hostname":</span> <span class="smtcode_value">"check.gibdd.ru",</span>
+                    <span class="smtcode_key">"vin":</span> <span class="smtcode_value">"W0L0SDL0886184973",</span>
+                    <span class="smtcode_key">"regnum":</span> <span class="smtcode_value">"",</span>
+                    <span class="smtcode_key">"message":</span> <span class="smtcode_value">"ver.3.3",</span>
+                    <span class="smtcode_key">"registerToken":</span> <span class="smtcode_value">"1f61741281601a61f916b14e1411871241cd1401a4176184",</span>
+                    <span class="smtcode_key">"status":</span> <span class="smtcode_value">200</span>
+                }</code>
               </pre>
 
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <pre class="smtcode_resp">
+                  <code class="json">{
+                    <span class="smtcode_key">"code":</span> <span class="smtcode_value">204,</span>
+                    <span class="smtcode_key">"message":</span> <span class="smtcode_value">"Неверный запрос."</span>
+                    }
+                  </code>
+                </pre>
               </div>
               <div class="box-text">
-                <h3>Создание заявки</h3>
-                <p>Для того, чтобы создать заявку необходимо отправить запрос с обязательными параметрами.</p>
-
-                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>lastName</td>
-                    <td>Фамилия</td>
-                  </tr>
-                  <tr>
-                    <td>name</td>
-                    <td>Имя</td>
-                  </tr>
-
-                  <tr>
-                    <td>dateOfBirdth</td>
-                    <td>Дата рождения</td>
-                  </tr>
-                  <tr>
-                    <td>driverLicense</td>
-                    <td>Текущие водительские права</td>
-                  </tr>
-                  </tbody>
-                </table>
-
-                <p><span style="text-decoration: underline;">Необязательные параметры:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>middleName</td>
-                    <td>Отчество</td>
-                  </tr>
-                  <tr>
-                    <td>oldDriverLicense</td>
-                    <td>Предыдущие водительские права</td>
-                  </tr>
-                  <tr>
-                    <td>oldLastName</td>
-                    <td>Предыдущая фамилия водителя</td>
-                  </tr>
-                  <tr>
-                    <td>perenosKBM</td>
-                    <td>Перенос КБМ со старых прав</td>
-                  </tr>
-                  <tr>
-                    <td>phone</td>
-                    <td>Телефон для уведомления</td>
-                  </tr>
-                  </tbody>
-                </table>
-
-                <p>Пример запроса:</p>
+                <h3>Получение информации по ДТП</h3>
+                <p>Получить актуальную информацию по кол-ву ДТП и подробной информации можно выполнив следующий
+                  запрос:</p>
                 <table class="table table-hover table-bordered smtcode">
                   <tbody>
                   <tr>
                     <td><a
-                        href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/create/?lastName=Иванов&amp;name=Сергей&amp;middleName=Фёдорович&amp;dateOfBirdth=12.12.1964&amp;driverLicense=11АА%20123456&amp;perenosKBM=0"
-                        target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/create/?lastName=Иванов&amp;name=Сергей&amp;middleName=Фёдорович&amp;dateOfBirdth=12.12.1964&amp;driverLicense=11АА
-                      123456&amp;perenosKBM=0</a></td>
-                  </tr>
-                  </tbody>
-                </table>
-
-                <p>Пример ответа при успешном создании заявки:</p>
-                <pre class="smtcode_resp">    <code class="json">{
-        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
-        <span class="smtcode_key">data</span>: {
-            <span class="smtcode_key">ticketId</span>: <span class="smtcode_value">3837,</span>
-            <span class="smtcode_key">kbmWhenCreating</span>: <span class="smtcode_value">0.8</span>
-        }
-    }</code>
-</pre>
-
-                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>005</td>
-                    <td>This ticket already exists / Такая заявка уже существует. Её ID - ID_TICKET</td>
-                  </tr>
-                  <tr>
-                    <td>006</td>
-                    <td>Ticket creation rejected. The current coefficient is 0.5 / Создание заявки отклонено. Текущий
-                      КБМ
-                      равен 0.5
+                        href="https://api-gibdd.ru/proxy/check/auto/history?checkType=dtp&vin=W0L0SDL0886184973&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713"
+                        target="_blank">https://api-gibdd.ru/proxy/check/auto/history?checkType=dtp&vin=W0L0SDL0886184973&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713</a>
                     </td>
                   </tr>
-                  <tr>
-                    <td>007</td>
-                    <td>Failed to query current coefficient / Не удалось получить текущий КБМ</td>
-                  </tr>
-                  <tr>
-                    <td>008</td>
-                    <td>Agent ID not specified / Не указан ID агента</td>
-                  </tr>
-                  <tr>
-                    <td>010</td>
-                    <td>Missing lastName parameter / Отсутствует обязательный параметр lastName</td>
-                  </tr>
-                  <tr>
-                    <td>011</td>
-                    <td>Invalid lastName parameter / Некорректный параметр lastName</td>
-                  </tr>
-                  <tr>
-                    <td>012</td>
-                    <td>Missing name parameter / Отсутствует обязательный параметр name</td>
-                  </tr>
-                  <tr>
-                    <td>013</td>
-                    <td>Invalid name parameter / Некорректный параметр name</td>
-                  </tr>
-
-                  <tr>
-                    <td>015</td>
-                    <td>Invalid middleName parameter / Некорректный параметр middleName</td>
-                  </tr>
-                  <tr>
-                    <td>016</td>
-                    <td>Missing dateOfBirdth parameter / Отсутствует обязательный параметр dateOfBirdth</td>
-                  </tr>
-                  <tr>
-                    <td>017</td>
-                    <td>Invalid dateOfBirdth parameter / Некорректный параметр dateOfBirdth</td>
-                  </tr>
-                  <tr>
-                    <td>018</td>
-                    <td>Driver under 18 years old / Водителю менее 18ти лет</td>
-                  </tr>
-                  <tr>
-                    <td>020</td>
-                    <td>Missing driverLicense parameter / Отсутствует обязательный параметр driverLicense</td>
-                  </tr>
-                  <tr>
-                    <td>021</td>
-                    <td>Invalid driverLicense parameter / Некорректный параметр driverLicense</td>
-                  </tr>
-                  <tr>
-                    <td>022</td>
-                    <td>Invalid oldDriverLicense parameter / Некорректный параметр oldDriverLicense</td>
-                  </tr>
-                  <tr>
-                    <td>023</td>
-                    <td>Invalid oldLastName parameter / Некорректный параметр oldLastName</td>
-                  </tr>
-                  <tr>
-                    <td>024</td>
-                    <td>Invalid phone parameter / Некорректный параметр phone</td>
-                  </tr>
-                  <tr>
-                    <td>019</td>
-                    <td>Insufficient funds in the account / Недостаточно средств</td>
-                  </tr>
                   </tbody>
                 </table>
+
+
+                <p>Пример ответа:</p>
+                <pre class="smtcode_resp">
+
+                   <code class="json">{
+                     <span class="smtcode_key">"requestTime":</span> <span
+                         class="smtcode_value">"21.06.2021 15:30",</span>
+                     <span class="smtcode_key">"RequestResult":</span> {
+                       <span class="smtcode_key">"errorDescription":</span> <span class="smtcode_value">"",</span>
+                       <span class="smtcode_key">"statusCode":</span> <span class="smtcode_value">1,</span>
+                       <span class="smtcode_key">"Accidents":</span> [
+                       {
+                           <span class="smtcode_key">"AccidentDateTime":</span> <span class="smtcode_value">"22.08.2018 11:00",</span>
+                           <span class="smtcode_key">"VehicleDamageState":</span> <span class="smtcode_value">"Повреждено",</span>
+                           <span class="smtcode_key">"AccidentNumber":</span> <span
+                         class="smtcode_value">"450148713",</span>
+                           <span class="smtcode_key">"AccidentType":</span> <span class="smtcode_value">"Наезд на стоящее ТС",</span>
+                           <span class="smtcode_key">"DamageDestription":</span> <span class="smtcode_value">"",</span>
+                           <span class="smtcode_key">"VehicleMark":</span> <span class="smtcode_value">"OPEL",</span>
+                           <span class="smtcode_key">"VehicleAmount":</span> <span class="smtcode_value">"2",</span>
+                           <span class="smtcode_key">"VehicleYear":</span> <span class="smtcode_value">"2008",</span>
+                           <span class="smtcode_key">"AccidentPlace":</span> <span class="smtcode_value">"Москва, Северный АО, Тимирязевский",</span>
+                           <span class="smtcode_key">"VehicleSort":</span> <span class="smtcode_value">"2",</span>
+                           <span class="smtcode_key">"VehicleModel":</span> <span class="smtcode_value">"Прочие модели Opel",</span>
+                           <span class="smtcode_key">"OwnerOkopf":</span> <span
+                         class="smtcode_value">"ФИЗИЧЕСКИЕ ЛИЦА",</span>
+                           <span class="smtcode_key">"RegionName":</span> <span class="smtcode_value">"Москва",</span>
+                           <span class="smtcode_key">"DamagePoints":</span> [
+                           <span class="smtcode_value">"214",</span>
+                           <span class="smtcode_value">"215",</span>
+                           <span class="smtcode_value">"224"</span>
+                          ]
+                       }
+                     ]
+                    },
+                       <span class="smtcode_key">"hostname":</span> <span class="smtcode_value">"check.gibdd.ru",</span>
+                       <span class="smtcode_key">"vin":</span> <span class="smtcode_value">"W0L0SDL0886184973",</span>
+                       <span class="smtcode_key">"status":</span> <span class="smtcode_value">200</span>
+                    }
+                }</code>
+              </pre>
+
+                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+                <pre class="smtcode_resp">
+                  <code class="json">{
+                    <span class="smtcode_key">"code":</span> <span class="smtcode_value">204,</span>
+                    <span class="smtcode_key">"message":</span> <span class="smtcode_value">"Неверный запрос."</span>
+                    }
+                  </code>
+                </pre>
               </div>
               <div class="box-text">
 
-                <h3>Редактирование заявки</h3>
-                <p>Для того, чтобы изменить заявку необходимо отправить запрос с обязательными параметрами.</p>
+                <h3>Получение информации по ограничениям</h3>
+                <p>Получить актуальную информацию по ограничениям можно выполнив следующий запрос:
+                </p>
 
-                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>id</td>
-                    <td>ID заявки</td>
-                  </tr>
-                  <tr>
-                    <td>lastName</td>
-                    <td>Фамилия</td>
-                  </tr>
-                  <tr>
-                    <td>name</td>
-                    <td>Имя</td>
-                  </tr>
-                  <tr>
-                    <td>dateOfBirdth</td>
-                    <td>Дата рождения</td>
-                  </tr>
-                  <tr>
-                    <td>driverLicense</td>
-                    <td>Текущие водительские права</td>
-                  </tr>
-                  </tbody>
-                </table>
-
-                <p><span style="text-decoration: underline;">Необязательные параметры:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>middleName</td>
-                    <td>Отчество</td>
-                  </tr>
-                  <tr>
-                    <td>oldDriverLicense</td>
-                    <td>Предыдущие водительские права</td>
-                  </tr>
-                  <tr>
-                    <td>oldLastName</td>
-                    <td>Предыдущая фамилия водителя</td>
-                  </tr>
-                  <tr>
-                    <td>phone</td>
-                    <td>Телефон для уведомления</td>
-                  </tr>
-                  </tbody>
-                </table>
-
-                <p>Пример запроса:</p>
                 <table class="table table-hover table-bordered smtcode">
                   <tbody>
                   <tr>
                     <td><a
-                        href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/edit/?id=3837&amp;lastName=Иванов&amp;name=Сергей&amp;middleName=Петрович&amp;dateOfBirdth=12.12.1964&amp;driverLicense=11АА%20123456"
-                        target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/edit/?id=3837&amp;lastName=Иванов&amp;name=Сергей&amp;middleName=Петрович&amp;dateOfBirdth=12.12.1964&amp;driverLicense=11АА
-                      123456</a></td>
-                  </tr>
-                  </tbody>
-                </table>
-
-                <p>Пример ответа при успешном редактировании заявки:</p>
-                <pre class="smtcode_resp">    <code class="json">{
-        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
-        <span class="smtcode_key">message</span>: <span class="smtcode_value">Ticket changes saved successfully</span>
-    }</code>
-</pre>
-
-                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>002</td>
-                    <td>Invalid ID Ticket / Некорректный параметр id</td>
-                  </tr>
-                  <tr>
-                    <td>004</td>
-                    <td>Ticket with this ID not found / Заявка с указанным ID не найдена</td>
-                  </tr>
-                  <tr>
-                    <td>010</td>
-                    <td>Missing lastName parameter / Отсутствует обязательный параметр lastName</td>
-                  </tr>
-                  <tr>
-                    <td>011</td>
-                    <td>Invalid lastName parameter / Некорректный параметр lastName</td>
-                  </tr>
-                  <tr>
-                    <td>012</td>
-                    <td>Missing name parameter / Отсутствует обязательный параметр name</td>
-                  </tr>
-                  <tr>
-                    <td>013</td>
-                    <td>Invalid name parameter / Некорректный параметр name</td>
-                  </tr>
-
-                  <tr>
-                    <td>015</td>
-                    <td>Invalid middleName parameter / Некорректный параметр middleName</td>
-                  </tr>
-                  <tr>
-                    <td>016</td>
-                    <td>Missing dateOfBirdth parameter / Отсутствует обязательный параметр dateOfBirdth</td>
-                  </tr>
-                  <tr>
-                    <td>017</td>
-                    <td>Invalid dateOfBirdth parameter / Некорректный параметр dateOfBirdth</td>
-                  </tr>
-                  <tr>
-                    <td>018</td>
-                    <td>Driver under 18 years old / Водителю менее 18ти лет</td>
-                  </tr>
-                  <tr>
-                    <td>020</td>
-                    <td>Missing driverLicense parameter / Отсутствует обязательный параметр driverLicense</td>
-                  </tr>
-                  <tr>
-                    <td>021</td>
-                    <td>Invalid driverLicense parameter / Некорректный параметр driverLicense</td>
-                  </tr>
-                  <tr>
-                    <td>022</td>
-                    <td>Invalid oldDriverLicense parameter / Некорректный параметр oldDriverLicense</td>
-                  </tr>
-                  <tr>
-                    <td>023</td>
-                    <td>Invalid oldLastName parameter / Некорректный параметр oldLastName</td>
-                  </tr>
-                  <tr>
-                    <td>024</td>
-                    <td>Invalid phone parameter / Некорректный параметр phone</td>
-                  </tr>
-                  <tr>
-                    <td>027</td>
-                    <td>This ticket is already in operation / Данная заявка уже в работе</td>
-                  </tr>
-                  <tr>
-                    <td>028</td>
-                    <td>This ticket is already closed / Данная заявка уже закрыта</td>
-                  </tr>
-                  <tr>
-                    <td>029</td>
-                    <td>This ticket has been deleted / Данная заявка удалена</td>
-                  </tr>
-                  </tbody>
-                </table>
-
-              </div>
-              <div class="box-text">
-                <h3>Статус заявки</h3>
-                <p>Получить актуальную инфомацию о заявке (дата и время подачи, стоимость заявки) можно выполнив
-                  следующий
-                  запрос:</p>
-
-                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>id</td>
-                    <td>Идентификатор заявки</td>
-                  </tr>
-                  </tbody>
-                </table>
-
-                <p>Пример запроса:</p>
-                <table class="table table-hover table-bordered smtcode">
-                  <tbody>
-                  <tr>
-                    <td><a href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/info/?id=10" target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/info/?id=100</a>
+                        href="https://api-gibdd.ru/proxy/check/auto/history?checkType=restrict&vin=WBAWC31050PW92116&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713"
+                        target="_blank">https://api-gibdd.ru/proxy/check/auto/history?checkType=restrict&vin=WBAWC31050PW92116&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713</a>
                     </td>
                   </tr>
                   </tbody>
                 </table>
 
                 <p>Пример ответа:</p>
-                <pre class="smtcode_resp">                        <code class="json">{
-                            <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
-                            <span class="smtcode_key">data</span>: {
-                                <span class="smtcode_key">dateCreate</span>: <span class="smtcode_value">2019-08-15 11:11:15,</span>
-                                <span class="smtcode_key">status</span>: <span class="smtcode_value">new</span>
-                            }
-                        }</code>
-                    </pre>
+
+
+                <p>Пример ответа при успешном редактировании заявки:</p>
+                <pre class="smtcode_resp">
+                  <code class="json">{
+                     <span class="smtcode_key">"requestTime":</span> <span
+                        class="smtcode_value">"22.06.2021 15:10",</span>
+                     <span class="smtcode_key">"RequestResult":</span> {
+                       <span class="smtcode_key">"records":</span> [
+                      {
+                    <span class="smtcode_key">"regname":</span> <span class="smtcode_value">"\u0421\u0430\u043c\u0430\u0440\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c",</span>
+                    <span class="smtcode_key">"osnOgr":</span> <span class="smtcode_value">"\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442: 211886137\/6353 \u043e\u0442 06.05.2021, \u0411\u0435\u0445\u0442\u0438\u043d\u0430 \u0422\u0430\u0442\u044c\u044f\u043d\u0430 \u042e\u0440\u044c\u0435\u0432\u043d\u0430, \u0421\u041f\u0418: 36531010083511, \u0418\u041f: 80831\/21\/63053-\u0418\u041f \u043e\u0442 05.05.2021",</span>
+                        <span class="smtcode_key">"gid":</span> <span class="smtcode_value">"63#SP377136389",</span>
+                          <span class="smtcode_key">"tsyear":</span> <span class="smtcode_value">"2008",</span>
+                        <span class="smtcode_key">"tsVIN":</span> <span
+                        class="smtcode_value">"WBAWC31050PW92116",</span>
+                        <span class="smtcode_key">"codDL":</span> <span class="smtcode_value">0,</span>
+                        <span class="smtcode_key">"dateogr":</span> <span class="smtcode_value">"06.05.2021",</span>
+                        <span class="smtcode_key">"ogrkod":</span> <span class="smtcode_value">"1",</span>
+                        <span class="smtcode_key">"tsmodel":</span> <span class="smtcode_value">"\u041d\u0435\u0442 \u0434\u0430\u043d\u043d\u044b\u0445",</span>
+                        <span class="smtcode_key">"tsKuzov":</span> <span
+                        class="smtcode_value">"WBAWC31050PW92116",</span>
+                        <span class="smtcode_key">"codeTo":</span> <span class="smtcode_value">47,</span>
+                        <span class="smtcode_key">"dateadd":</span> <span class="smtcode_value">"06.05.2021",</span>
+                        <span class="smtcode_key">"phone":</span> <span class="smtcode_value">"+7(846)995-58-92",</span>
+                        <span class="smtcode_key">"regid":</span> <span class="smtcode_value">"1136",</span>
+                        <span class="smtcode_key">"divtype":</span> <span class="smtcode_value">"2",</span>
+                        <span class="smtcode_key">"divid":</span> <span class="smtcode_value">"3021"</span>
+                      },
+                    ],
+                      <span class="smtcode_key">"count":</span> <span class="smtcode_value">1,</span>
+                      <span class="smtcode_key">"error":</span> <span class="smtcode_value">0</span>
+                    },
+                       <span class="smtcode_key">"hostname":</span> <span class="smtcode_value">"database6",</span>
+                       <span class="smtcode_key">"vin":</span> <span class="smtcode_value">"WBAWC31050PW92116",</span>
+                       <span class="smtcode_key">"status":</span> <span class="smtcode_value">200</span>
+                    }
+                }</code>
+                </pre>
 
                 <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>002</td>
-                    <td>Invalid ID Ticket / Некорректный ID заявки</td>
-                  </tr>
-                  <tr>
-                    <td>026</td>
-                    <td>Missing id parameter / Отсутствует обязательный параметр - id.</td>
-                  </tr>
-                  </tbody>
-                </table>
+                <pre class="smtcode_resp">
+                  <code class="json">{
+                    <span class="smtcode_key">"code":</span> <span class="smtcode_value">204,</span>
+                    <span class="smtcode_key">"message":</span> <span class="smtcode_value">"Неверный запрос."</span>
+                    }
+                  </code>
+                </pre>
               </div>
+
               <div class="box-text">
-                <h3>Удаление заявки</h3>
-                <p>Для того, чтобы удалить заявку необходимо отправить запрос с обязательными параметрами.</p>
+                <h3>Получение информации по розыскам
+                </h3>
+                <p>Получить актуальную информацию по розыскам автомобиля можно выполнив следующий запрос:</p>
 
-                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>id</td>
-                    <td>ID заявки</td>
-                  </tr>
-                  </tbody>
-                </table>
-
-                <p>Пример запроса:</p>
                 <table class="table table-hover table-bordered smtcode">
                   <tbody>
                   <tr>
-                    <td><a href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/delete/?id=10" target="_blank">https://05kbm.ru/lka/api/v1/YOUR_API_KEY/tickets/delete/?id=10</a>
+                    <td><a
+                        href="https://api-gibdd.ru/proxy/check/auto/history?checkType=wanted&vin=W0L0SDL0886184973&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713"
+                        target="_blank">https://api-gibdd.ru/proxy/check/auto/history?checkType=wanted&vin=W0L0SDL0886184973&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713</a>
                     </td>
                   </tr>
                   </tbody>
                 </table>
 
-                <p>Пример ответа при успешном удалени заявки:</p>
-                <pre class="smtcode_resp">    <code class="json">{
-        <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
-        <span class="smtcode_key">message</span>: <span
-                      class="smtcode_value">Ticket deletion completed successfully</span>
-    }</code>
-</pre>
+
+                <p>Пример ответа:</p>
+                <pre class="smtcode_resp">
+                  <code class="json">{
+                     <span class="smtcode_key">"requestTime":</span> <span
+                        class="smtcode_value">"21.06.2021 15:35",</span>
+                     <span class="smtcode_key">"RequestResult":</span> {
+                       <span class="smtcode_key">"records":</span>
+                      {
+
+                      },
+
+                      <span class="smtcode_key">"count":</span> <span class="smtcode_value">0,</span>
+                      <span class="smtcode_key">"error":</span> <span class="smtcode_value">0</span>
+                    },
+                       <span class="smtcode_key">"hostname":</span> <span class="smtcode_value">"database6",</span>
+                       <span class="smtcode_key">"vin":</span> <span class="smtcode_value">"W0L0SDL0886184973",</span>
+                       <span class="smtcode_key">"status":</span> <span class="smtcode_value">200</span>
+                    }
+                }</code>
+                </pre>
 
                 <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
-                <table class="table table-hover table-bordered">
+                <pre class="smtcode_resp">
+                  <code class="json">{
+                    <span class="smtcode_key">"code":</span> <span class="smtcode_value">204,</span>
+                    <span class="smtcode_key">"message":</span> <span class="smtcode_value">"Неверный запрос."</span>
+                    }
+                  </code>
+                </pre>
+              </div>
+
+              <div class="box-text">
+                <h3>Получение информации по диагностической карте и тех. осмотру
+                </h3>
+                <p>Получить актуальную диаг. карте и тех. осмотру можно выполнив следующий запрос:
+                </p>
+                <table class="table table-hover table-bordered smtcode">
                   <tbody>
                   <tr>
-                    <td>002</td>
-                    <td>Invalid ID Ticket / Некорректный параметр id</td>
-                  </tr>
-                  <tr>
-                    <td>004</td>
-                    <td>Ticket with this ID not found / Заявка с указанным ID не найдена</td>
-                  </tr>
-                  <tr>
-                    <td>027</td>
-                    <td>This ticket is already in operation / Данная заявка уже в работе</td>
-                  </tr>
-                  <tr>
-                    <td>028</td>
-                    <td>This ticket is already closed / Данная заявка уже закрыта</td>
-                  </tr>
-                  <tr>
-                    <td>029</td>
-                    <td>This ticket has been deleted / Данная заявка удалена</td>
+                    <td><a
+                        href="https://api-gibdd.ru/proxy/check/auto/history?checkType=diagnostic&vin=W0L0SDL0886184973&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713"
+                        target="_blank">https://api-gibdd.ru/proxy/check/auto/history?checkType=diagnostic&vin=W0L0SDL0886184973&reCaptchaToken=f897fd8fbcbd8e4eb7cf0553f6276713</a>
+                    </td>
                   </tr>
                   </tbody>
                 </table>
+                <p>Пример ответа:</p>
+                <pre class="smtcode_resp">
+                  <code class="json">{
+                     <span class="smtcode_key">"requestTime":</span> <span
+                        class="smtcode_value">"21.06.2021 15:36",</span>
+                     <span class="smtcode_key">"RequestResult":</span> {
+                       <span class="smtcode_key">"diagnosticCards":</span> [
+                      {
+                    <span class="smtcode_key">"dcExpirationDate":</span> <span class="smtcode_value">"2021-12-12",</span>
+                    <span class="smtcode_key">"pointAddress":</span> <span class="smtcode_value">"630082, НОВОСИБИРСКАЯ ОБЛАСТЬ, НОВОСИБИРСК ГОРОД, , ДАЧНАЯ УЛИЦА, 66, 3, 0",</span>
+                        <span class="smtcode_key">"chassis":</span> <span class="smtcode_value">"",</span>
+                          <span class="smtcode_key">"body":</span> <span class="smtcode_value">"W0L0SDL0886184973",</span>
+                        <span class="smtcode_key">"operatorName":</span> <span
+                        class="smtcode_value">null,</span>
+                        <span class="smtcode_key">"pdfBase64":</span> <span class="smtcode_value">null,</span>
+                        <span class="smtcode_key">"odometerValue":</span> <span class="smtcode_value">"143765",</span>
+                        <span class="smtcode_key">"dcNumber":</span> <span class="smtcode_value">"098780012012587",</span>
+                        <span class="smtcode_key">"dcDate":</span> <span class="smtcode_value">"2020-12-11",</span>
+                        <span class="smtcode_key">"previousDcs":</span> [
 
+                        ]
+                      },
+                    ],
+                      <span class="smtcode_key">"count":</span> <span class="smtcode_value">1,</span>
+                      <span class="smtcode_key">"error":</span> <span class="smtcode_value">0</span>
+                    },
+                       <span class="smtcode_key">"hostname":</span> <span class="smtcode_value">"database6",</span>
+                       <span class="smtcode_key">"vin":</span> <span class="smtcode_value">"WBAWC31050PW92116",</span>
+                       <span class="smtcode_key">"status":</span> <span class="smtcode_value">200</span>
+                    }
+                }</code>
+                </pre>
+              </div>
 
+              <div class="box-text">
                 <h3>Запрос списка последних заявок</h3>
                 <p>Для того, чтобы получить список последних заявок необходимо отправить запрос с обязательными
                   параметрами.</p>
@@ -734,57 +577,58 @@
                   </tr>
                   </tbody>
                 </table>
-
-                <h3>Демо-режим</h3>
-                <p>Дополнительно имеется так называемый демо-режим, на котором Вы можете протестировать запросы и ответы
-                  на них не создавая реальных заявок.</p>
-
-                <p>Для того, чтобы воспользоваться демо-режимом, достаточно в ссылке запроса изменить **api** на
-                  **demo-api**.</p>
-                <p>Например ,чтобы получить актуальную инфомацию об аккаунте в режиме demo:</p>
-                <table class="table table-hover table-bordered smtcode">
-                  <tbody>
-                  <tr>
-                    <td><a href="https://05kbm.ru/lka/demo-api/v1/YOUR_API_KEY/account/info" target="_blank">https://05kbm.ru/lka/demo-api/v1/YOUR_API_KEY/account/info</a>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
               </div>
-              <div class="box-text">
 
-                <h3>Запрос истории водительских прав</h3>
-                <p>Получить историю водительских прав можно выполнив запрос:</p>
+              <h3>Демо-режим</h3>
+              <p>Дополнительно имеется так называемый демо-режим, на котором Вы можете протестировать запросы и ответы
+                на них не создавая реальных заявок.</p>
 
-                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>fio</td>
-                    <td>ФИО водителя</td>
-                  </tr>
-                  <tr>
-                    <td>driverLicense</td>
-                    <td>Серия и номер водительского удостоверения</td>
-                  </tr>
-                  </tbody>
-                </table>
+              <p>Для того, чтобы воспользоваться демо-режимом, достаточно в ссылке запроса изменить **api** на
+                **demo-api**.</p>
+              <p>Например ,чтобы получить актуальную инфомацию об аккаунте в режиме demo:</p>
+              <table class="table table-hover table-bordered smtcode">
+                <tbody>
+                <tr>
+                  <td><a href="https://05kbm.ru/lka/demo-api/v1/YOUR_API_KEY/account/info" target="_blank">https://05kbm.ru/lka/demo-api/v1/YOUR_API_KEY/account/info</a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="box-text">
 
-                <p>Пример запроса:</p>
-                <table class="table table-hover table-bordered smtcode">
-                  <tbody>
-                  <tr>
-                    <td><a
-                        href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/create/?fio=Иванов Иван Иванович&amp;driverLicense=1111 321321"
-                        target="_blank">
-                      https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/create/?fio=Иванов Иван Иванович&amp;driverLicense=1111
-                      321321 </a></td>
-                  </tr>
-                  </tbody>
-                </table>
+              <h3>Запрос истории водительских прав</h3>
+              <p>Получить историю водительских прав можно выполнив запрос:</p>
 
-                <p>Пример ответа:</p>
-                <pre class="smtcode_resp">    <code class="json">{
+              <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+              <table class="table table-hover table-bordered">
+                <tbody>
+                <tr>
+                  <td>fio</td>
+                  <td>ФИО водителя</td>
+                </tr>
+                <tr>
+                  <td>driverLicense</td>
+                  <td>Серия и номер водительского удостоверения</td>
+                </tr>
+                </tbody>
+              </table>
+
+              <p>Пример запроса:</p>
+              <table class="table table-hover table-bordered smtcode">
+                <tbody>
+                <tr>
+                  <td><a
+                      href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/create/?fio=Иванов Иван Иванович&amp;driverLicense=1111 321321"
+                      target="_blank">
+                    https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/create/?fio=Иванов Иван Иванович&amp;driverLicense=1111
+                    321321 </a></td>
+                </tr>
+                </tbody>
+              </table>
+
+              <p>Пример ответа:</p>
+              <pre class="smtcode_resp">    <code class="json">{
         <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
         <span class="smtcode_key">data</span>: {
             <span class="smtcode_value">requestId</span>: <span class="smtcode_value">352</span>
@@ -792,51 +636,51 @@
     }</code>
                     </pre>
 
-                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>035</td>
-                    <td>Missing fio parameter</td>
-                  </tr>
-                  <tr>
-                    <td>020</td>
-                    <td>Missing driverLicense parameter / Отсутствует обязательный параметр - driverLicense.</td>
-                  </tr>
-                  <tr>
-                    <td>038</td>
-                    <td>Invalid fio parameter / Отсутствует обязательный параметр - fio.</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="box-text">
+              <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+              <table class="table table-hover table-bordered">
+                <tbody>
+                <tr>
+                  <td>035</td>
+                  <td>Missing fio parameter</td>
+                </tr>
+                <tr>
+                  <td>020</td>
+                  <td>Missing driverLicense parameter / Отсутствует обязательный параметр - driverLicense.</td>
+                </tr>
+                <tr>
+                  <td>038</td>
+                  <td>Invalid fio parameter / Отсутствует обязательный параметр - fio.</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="box-text">
 
-                <h3>Получение истории водительских прав по ID запроса:</h3>
+              <h3>Получение истории водительских прав по ID запроса:</h3>
 
-                <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>requestId</td>
-                    <td>ID запроса</td>
-                  </tr>
-                  </tbody>
-                </table>
+              <p><span style="text-decoration: underline;">Обязательные параметры:</span></p>
+              <table class="table table-hover table-bordered">
+                <tbody>
+                <tr>
+                  <td>requestId</td>
+                  <td>ID запроса</td>
+                </tr>
+                </tbody>
+              </table>
 
-                <p>Пример запроса:</p>
-                <table class="table table-hover table-bordered smtcode">
-                  <tbody>
-                  <tr>
-                    <td><a href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/info/?requestId=317"
-                           target="_blank">
-                      https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/info/?requestId=317 </a></td>
-                  </tr>
-                  </tbody>
-                </table>
+              <p>Пример запроса:</p>
+              <table class="table table-hover table-bordered smtcode">
+                <tbody>
+                <tr>
+                  <td><a href="https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/info/?requestId=317"
+                         target="_blank">
+                    https://05kbm.ru/lka/api/v1/YOUR_API_KEY/history_vu/info/?requestId=317 </a></td>
+                </tr>
+                </tbody>
+              </table>
 
-                <p>Пример ответа:</p>
-                <pre class="smtcode_resp">    <code class="json">{
+              <p>Пример ответа:</p>
+              <pre class="smtcode_resp">    <code class="json">{
         <span class="smtcode_key">status</span>: <span class="smtcode_value">true,</span>
         <span class="smtcode_key">data</span>: {
             <span class="smtcode_value">result</span>: [
@@ -845,7 +689,7 @@
                     <span class="smtcode_key">date_vid</span>: <span class="smtcode_value">16.01.2004</span>,
                     <span class="smtcode_key">srok</span>: <span class="smtcode_value">16.01.2014</span>,
                     <span class="smtcode_key">osn</span>: <span
-                      class="smtcode_value">Первичная выдача после обучения</span>
+                    class="smtcode_value">Первичная выдача после обучения</span>
                     <span class="smtcode_key">date_proc</span>: <span class="smtcode_value">02.04.2013</span>
                     <span class="smtcode_key">doc_type</span>: <span class="smtcode_value">Водительское удостоверение (приказ МВД России №356-09)</span>
                 },
@@ -854,7 +698,7 @@
                     <span class="smtcode_key">date_vid</span>: <span class="smtcode_value">23.05.2007</span>,
                     <span class="smtcode_key">srok</span>: <span class="smtcode_value">23.05.2017</span>,
                     <span class="smtcode_key">osn</span>: <span
-                      class="smtcode_value">Первичная выдача после обучения</span>
+                    class="smtcode_value">Первичная выдача после обучения</span>
                     <span class="smtcode_key">date_proc</span>: <span class="smtcode_value">02.04.2017</span>
                     <span class="smtcode_key">doc_type</span>: <span class="smtcode_value">Водительское удостоверение (приказ МВД России №356-09)</span>
                 }
@@ -863,33 +707,33 @@
     }</code>
                     </pre>
 
-                <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
-                <table class="table table-hover table-bordered">
-                  <tbody>
-                  <tr>
-                    <td>037</td>
-                    <td>Missing requestId parameter</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-
+              <p><span style="text-decoration: underline;">Возможные ошибки:</span></p>
+              <table class="table table-hover table-bordered">
+                <tbody>
+                <tr>
+                  <td>037</td>
+                  <td>Missing requestId parameter</td>
+                </tr>
+                </tbody>
+              </table>
             </div>
+
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="main-footer">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12">
-              <div class="copyright">Copyright © 2018-2019. All rights reserved.</div>
-            </div>
+    <div class="main-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">Copyright © 2018-2019. All rights reserved.</div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
 </div>
