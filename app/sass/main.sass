@@ -109,6 +109,14 @@ input, textarea, select
   color: #4F4F4F
   &::placeholder
     color: #4F4F4F
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.form-control
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
 
 label
   display: block
@@ -1214,21 +1222,49 @@ footer
     margin: 20px auto 0
     height: 50px
     width: 100%
+  .pagination
+    margin: 10px 0 0
+    li
+      margin: 0 -1px 0 0
 
+      a
+        border: 1px solid $blue
+        padding: 5px 10px
+        color: #444
+        background: #fafafa
+    .active
+      a
+        background: $blue
+        color: #fff
 
 .box-header
   color: #444
-  display: block
   padding: 10px
   position: relative
   border-bottom: 1px solid #f4f4f4
+  display: flex
+  align-items: center
+  flex-wrap: wrap
   h3
     font-size: 18px
     margin: 0
+  .fa
+    font-size: 18px
+    color: $blue
+
+.box-header>.fa, .box-header>.glyphicon, .box-header>.ion
+  margin-right: 5px
+
+.text-aqua
+  color: $blue
+
+b, strong
+  font-weight: 700
 
 .box-body
   border-radius: 0 0 3px 3px
   padding: 10px
+  font-size: 14px
 
 .smt_apicontent
   margin-bottom: 30px
@@ -1286,6 +1322,26 @@ footer
 .table-responsive
   width: 100%
   overflow-x: auto
+
+.box-balance
+  .btn-group
+    .btn
+      width: fit-content
+      font-size: 14px
+
+
+.dataTables_length
+  label
+    display: flex
+    align-items: center
+
+
+
+.select
+  appearance: auto
+  width: auto
+  margin: 0 0 0 10px
+  font-size: 14px
 
 
 @import "media"

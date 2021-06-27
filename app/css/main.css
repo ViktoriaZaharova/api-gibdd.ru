@@ -113,6 +113,15 @@ input, textarea, select {
     color: #4F4F4F; }
   input::placeholder, textarea::placeholder, select::placeholder {
     color: #4F4F4F; }
+  input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+.form-control:hover, .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
 label {
   display: block;
@@ -1440,20 +1449,52 @@ footer {
     margin: 20px auto 0;
     height: 50px;
     width: 100%; }
+  .box .pagination {
+    margin: 10px 0 0; }
+    .box .pagination li {
+      margin: 0 -1px 0 0; }
+      .box .pagination li a {
+        border: 1px solid #2F80ED;
+        padding: 5px 10px;
+        color: #444;
+        background: #fafafa; }
+    .box .pagination .active a {
+      background: #2F80ED;
+      color: #fff; }
 
 .box-header {
   color: #444;
-  display: block;
   padding: 10px;
   position: relative;
-  border-bottom: 1px solid #f4f4f4; }
+  border-bottom: 1px solid #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .box-header h3 {
     font-size: 18px;
     margin: 0; }
+  .box-header .fa {
+    font-size: 18px;
+    color: #2F80ED; }
+
+.box-header > .fa, .box-header > .glyphicon, .box-header > .ion {
+  margin-right: 5px; }
+
+.text-aqua {
+  color: #2F80ED; }
+
+b, strong {
+  font-weight: 700; }
 
 .box-body {
   border-radius: 0 0 3px 3px;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 14px; }
 
 .smt_apicontent {
   margin-bottom: 30px;
@@ -1512,6 +1553,28 @@ footer {
 .table-responsive {
   width: 100%;
   overflow-x: auto; }
+
+.box-balance .btn-group .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 14px; }
+
+.dataTables_length label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.select {
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+  width: auto;
+  margin: 0 0 0 10px;
+  font-size: 14px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
@@ -1733,7 +1796,18 @@ footer {
     .price .btn-group .btn {
       margin: 0 0 20px; }
   .variable-payment {
-    padding: 30px 0 40px; } }
+    padding: 30px 0 40px; }
+  .box-balance .btn-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .box-balance .btn-group .btn {
+      margin-right: 0;
+      width: 100%; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 420px) {
